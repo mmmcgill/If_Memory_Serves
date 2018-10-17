@@ -1,0 +1,3 @@
+0; 0; 100; 100; Move Addy to the coffee cup using "A"-"D" and take the cup using "Q"
+0; 0; 60; 60; Give Val the cup, using "W"
+0; 0; 60; 100; Third instruction for world 1 level 1 goes here.
