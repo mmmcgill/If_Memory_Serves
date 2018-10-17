@@ -1,0 +1,9 @@
+As of October 17, 2018, all files are created/modified/deleted using Unity 2018.2.12. 
+Please do not use any other version until we are all ready to move to a newer version.
+
+The flag in github is set so that before pushing your branch into the github version, 
+you must have downloaded the most recent software. So, create your branch, make your changes locally,
+and then before pushing your branch up to github, first make sure any changes on github are integrated
+into your new branch. This will hopefully limit the number of changes overwriting other changes.
+
+Questions? Email mmmcgill@knox.edu.
