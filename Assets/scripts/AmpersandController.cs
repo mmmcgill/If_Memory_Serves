@@ -2,14 +2,15 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class AmpersandController : PlayerController {
 
 
     private StarController star;
-    private Animator animAddy;
-    float speedAddy;
-    bool facingright;
-    private Rigidbody rbAddy;
+   // private Animator animAddy;
+   // float speedAddy;
+    //bool facingright;
+    //private Rigidbody rbAddy;
 
     override public void Start() {
     base.Start();
@@ -17,36 +18,39 @@ public class AmpersandController : PlayerController {
 
         star = GameObject.Find("/players/star").GetComponent<StarController>();
         levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
-        animAddy = GetComponent<Animator>();
-        facingright = true;
-        //rbAddy = GetComponent<Rigidbody>();
+       // animAddy = GetComponent<Animator>();
+       // facingright = true;
+       // rbAddy = GetComponent<Rigidbody>();
 
     otherPlayer = star;
   }
 
     override public void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+       // float moveHorizontal = Input.GetAxis("Horizontal");
+      //  float moveVertical = Input.GetAxis("Vertical");
 
-        animAddy.SetFloat("speed", Mathf.Abs(moveHorizontal));
+       // animAddy.SetFloat("speed", Mathf.Abs(moveHorizontal));
 
         //rbAddy.velocity = new Vector2(moveHorizontal, moveVertical) * speed;
 
-        if (moveHorizontal > 0 && !facingright) {
-            flip();
-        }
-        else if (moveHorizontal<0 && facingright){
-            flip();
-        }
+       // if (moveHorizontal > 0 && !facingright) {
+         //   flip();
+        //}
+        //else if (moveHorizontal<0 && facingright){
+         //   flip();
+        //}
     }
 
      void flip(){
-        facingright = !facingright;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+       // facingright = !facingright;
+        //Vector3 theScale = transform.localScale;
+        //theScale.x *= -1;
+        //transform.localScale = theScale;
     }
+
+
+
     //    base.Update();
     //
     ////    // Emit feeler pointer on left-click.

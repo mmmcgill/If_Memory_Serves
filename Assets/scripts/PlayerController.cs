@@ -30,6 +30,8 @@ public abstract class PlayerController : MonoBehaviour {
   protected Tool activeTool;
   protected Tool inactiveTool;
 
+    bool facingright;
+
 //  private bool isSquishing;
 
   // loot related
@@ -117,6 +119,8 @@ public abstract class PlayerController : MonoBehaviour {
     lootSprite = transform.Find("loot").GetComponent<SpriteRenderer>();
     levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
     head = transform.Find("head").GetComponent<FootController>();
+
+        facingright = true;
 
     targetCell = null;
     basePointer = null;
@@ -223,7 +227,25 @@ public abstract class PlayerController : MonoBehaviour {
 //      oomph += otherPlayer.oomph;
 //    }
     rigidbody.velocity = new Vector2(oomph * speed, rigidbody.velocity.y);
-  }
+
+
+        if (oomph > 0 && !facingright)
+        {
+            flip();
+        }
+        else if (oomph<0 && facingright)
+        {
+
+            flip();
+        }
+    }
+
+    void flip(){
+        facingright = !facingright;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
   virtual public bool IsTransmittable() {
     return targetCell != null && !(loot.text == "" && targetCell.GetLoot() == "");
