@@ -25,8 +25,8 @@ public class AmpersandController : PlayerController {
     otherPlayer = star;
   }
 
-    override public void Update()
-    {
+   // override public void Update()
+   // {
        // float moveHorizontal = Input.GetAxis("Horizontal");
       //  float moveVertical = Input.GetAxis("Vertical");
 
@@ -40,14 +40,14 @@ public class AmpersandController : PlayerController {
         //else if (moveHorizontal<0 && facingright){
          //   flip();
         //}
-    }
+   // }
 
-     void flip(){
+     //void flip(){
        // facingright = !facingright;
         //Vector3 theScale = transform.localScale;
         //theScale.x *= -1;
         //transform.localScale = theScale;
-    }
+    //}
 
 
 

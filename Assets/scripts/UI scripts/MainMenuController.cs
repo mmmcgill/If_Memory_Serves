@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour {
 	// Audio
 
 	[SerializeField]
-	public GameObject PanelLevelSelect, loadingPanel;
+	public GameObject PanelLevelSelect, loadingPanel, PanelStory;
 
 	[SerializeField]
 	public GameObject UICanvas;
@@ -69,6 +69,11 @@ public class MainMenuController : MonoBehaviour {
 
 	#region Public Functions
 	//restarts the level
+
+    public void gotoStory(){
+        PanelStory.SetActive(true);
+    }
+
 	public void goToLevelSelect()  
 	{ 
 		// Create the buttons on the screen
