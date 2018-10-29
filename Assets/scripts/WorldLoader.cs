@@ -67,7 +67,10 @@ public class WorldLoader : MonoBehaviour {
 
 	// This loads (dynamically) the grid on the level select screen.
 	public void LoadLevelSelect() {
+        string[] worldTitle = new string[] {"Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tidbits", "Main Grub"};
 		int worldY = 0;
+        Color textColor = new Color();
+        ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
 		GameObject[] worldPanels = new GameObject[worlds.Count];
 		for (int i=0; i<worlds.Count; i++)
 		{
@@ -78,9 +81,10 @@ public class WorldLoader : MonoBehaviour {
 			GameObject newText = Instantiate(worldText) as GameObject;
 			newText.transform.SetParent(worldPanels[i].transform, false);
 			newText.name = "worldText"+i;
-			newText.GetComponent<Text>().text = "World " + (i+1);
+            newText.GetComponent<Text>().color = textColor;
+            newText.GetComponent<Text>().text = worldTitle[i];
 			worldY = 50-(100*i);
-			Vector2	newTextPos = new Vector2(-375,0);
+			Vector2	newTextPos = new Vector2(-345,0);
 			newText.transform.localPosition = newTextPos;  
 
 			for (int j=0; j<worlds[i]; j++)
@@ -89,7 +93,7 @@ public class WorldLoader : MonoBehaviour {
 				newButton.transform.SetParent(worldPanels[i].transform, false);
 				newButton.name = "level" + i + "-" + j; // levels[j].ToString(); This alwasy set world to 0, so not sure why
 				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
-				Vector2	newButtonPos = new Vector2(175*j-200,0);
+				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
 			}
 		}

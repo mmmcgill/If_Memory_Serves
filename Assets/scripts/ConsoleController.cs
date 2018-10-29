@@ -56,7 +56,7 @@ public class ConsoleController : MonoBehaviour {
   public void LevelStart() {
 		
 	if ((levelController.Current.world == 0) && (levelController.Current.level == 0)) {
-		PanelStory.SetActive (true);
+		//PanelStory.SetActive (true);
 		PanelInfo.SetActive (false);
 	} else {
 		PanelStory.SetActive (false);

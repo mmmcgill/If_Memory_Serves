@@ -10,9 +10,10 @@ public class MainMenuController : MonoBehaviour {
 	// Audio
 
 	[SerializeField]
-	public GameObject PanelLevelSelect, loadingPanel, PanelStory;
+	public GameObject PanelLevelSelect, loadingPanel, PanelStory, backwardButton, PanelInfo;
+    public GameObject PanelStory1, PanelStory2, PanelStory3;
 
-	[SerializeField]
+    [SerializeField]
 	public GameObject UICanvas;
 
 	private int currentLevel;
@@ -20,7 +21,9 @@ public class MainMenuController : MonoBehaviour {
 	private int achievedLevel;
 	private int achievedWorld;
 
-	public AudioClip simpleButtonSFX;
+    public int currentStoryPanel = 1;
+
+    public AudioClip simpleButtonSFX;
 
 	//private LevelManager levelManager;
 	#endregion
@@ -65,10 +68,60 @@ public class MainMenuController : MonoBehaviour {
 	{
 	}
 
-	#endregion
+    #endregion
 
-	#region Public Functions
-	//restarts the level
+    #region Public Functions
+    //restarts the level
+
+    public void forwardStoryPanel()
+    {
+        currentStoryPanel += 1;
+        showStoryPanel();
+    }
+
+    public void backwardStoryPanel()
+    {
+        currentStoryPanel -= 1;
+        showStoryPanel();
+    }
+
+    private void showStoryPanel()
+    {
+        // Shows game story panels 1 through 3 depending on what is selected
+        Debug.Log(currentStoryPanel);
+        switch (currentStoryPanel)
+        {
+            case 1:
+                PanelStory1.SetActive(true);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(false);
+                backwardButton.SetActive(true);
+                break;
+            case 2:
+                PanelStory1.SetActive(false);
+                PanelStory2.SetActive(true);
+                PanelStory3.SetActive(false);
+                break;
+            case 3:
+                PanelStory1.SetActive(false);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(true);
+                break;
+            case 4:
+                // Show the PanelLevelSelect
+                PanelLevelSelect.SetActive(true);
+                PanelStory.SetActive(false);
+               break;
+            default:
+                PanelStory1.SetActive(true);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(false);
+                break;
+        }
+    }
+    public void closeStoryPanel(){
+        PanelStory.SetActive(false);
+    }
 
     public void gotoStory(){
         PanelStory.SetActive(true);
@@ -121,7 +174,8 @@ public class MainMenuController : MonoBehaviour {
 	public void closePanel()
 	{
 		SoundManager.instance.PlaySingle(simpleButtonSFX);
-		goToGeneric("Main");
+        //goToGeneric("Main");
+        PanelLevelSelect.SetActive(false);
 	}
 
 	#endregion

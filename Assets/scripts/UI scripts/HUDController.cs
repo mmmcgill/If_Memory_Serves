@@ -197,6 +197,9 @@ public class HUDController : MonoBehaviour {
             StartCoroutine(showTextInPanel(showText, textPosition));
         }
 	}
+    public void closeTutorialPanel(){
+        PanelTutorial.SetActive(false);
+    }
 		
    // public void showPanelInstruct2()
     //{
