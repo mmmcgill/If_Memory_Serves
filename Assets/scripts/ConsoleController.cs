@@ -17,7 +17,7 @@ public class ConsoleController : MonoBehaviour {
 
   	private ArrayList allCode;
 	private string[] positiveAffirmations = new string[] {"Great work!", "Excellent!", "Order Up!", "Smooth Server!", "Sweetener and Cream!"};
-	public GameObject PanelStory, PanelInfo;
+	public GameObject  PanelInfo;
 
   	public bool condensedCode;
 	public GameObject PanelPopUp, HeaderPopUp, BodyPopUp; 
@@ -56,10 +56,8 @@ public class ConsoleController : MonoBehaviour {
   public void LevelStart() {
 		
 	if ((levelController.Current.world == 0) && (levelController.Current.level == 0)) {
-		//PanelStory.SetActive (true);
 		PanelInfo.SetActive (false);
 	} else {
-		PanelStory.SetActive (false);
 		PanelInfo.SetActive (true);
 	}
 

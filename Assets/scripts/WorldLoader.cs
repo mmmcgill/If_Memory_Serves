@@ -95,7 +95,7 @@ public class WorldLoader : MonoBehaviour {
 				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
 				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
-			}
+            }
 		}
 	}
 }
