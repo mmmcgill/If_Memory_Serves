@@ -173,12 +173,12 @@ public class MainMenuController : MonoBehaviour {
 
         Debug.Log(currentWorld + " " + currentLevel);
 
-        if (currentWorld == 0)
+       /* if (currentWorld == 0)
         {
             Debug.Log("checked");
             PanelStory.SetActive(true);
-        }
-        else
+        }*/
+      // else
         {      
             SceneManager.LoadScene("FromLevelLoadFile");
         }
