@@ -80,10 +80,10 @@ public class WorldLoader : MonoBehaviour {
 
 			GameObject newText = Instantiate(worldText) as GameObject;
 			newText.transform.SetParent(worldPanels[i].transform, false);
-			newText.name = "worldText"+i;
+            worldY = 50 - (100 * i);
+            newText.name = "worldText"+i;
             newText.GetComponent<Text>().color = textColor;
             newText.GetComponent<Text>().text = worldTitle[i];
-			worldY = 50-(100*i);
 			Vector2	newTextPos = new Vector2(-345,0);
 			newText.transform.localPosition = newTextPos;  
 
@@ -95,7 +95,7 @@ public class WorldLoader : MonoBehaviour {
 				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
 				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
-			}
+            }
 		}
 	}
 }

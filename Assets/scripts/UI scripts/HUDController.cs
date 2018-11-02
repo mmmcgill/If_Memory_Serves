@@ -250,49 +250,6 @@ public class HUDController : MonoBehaviour {
 		GameObject.Find("TheLevel").GetComponent<LevelLoader>().ResetLevel();
 	}
 
-	public void forwardStoryPanel() {
-		currentStoryPanel += 1;
-		showStoryPanel ();
-	}
-
-	public void backwardStoryPanel() {
-		currentStoryPanel -= 1;
-		showStoryPanel ();
-	}
-
-	private void showStoryPanel() {
-		// Shows game story panels 1 through 3 depending on what is selected
-		Debug.Log(currentStoryPanel);
-		switch (currentStoryPanel) {
-		case 1:
-			PanelStory1.SetActive (true);
-			PanelStory2.SetActive (false);
-			PanelStory3.SetActive (false);
-			backwardButton.SetActive (true);
-			break;
-		case 2:
-			PanelStory1.SetActive(false);
-			PanelStory2.SetActive(true);
-			PanelStory3.SetActive(false);
-			break;
-		case 3:
-			PanelStory1.SetActive (false);
-			PanelStory2.SetActive (false);
-			PanelStory3.SetActive (true);
-			break;
-		case 4:
-			// Show the PanelInfo
-			PanelInfo.SetActive (true);
-			PanelStory.SetActive (false);
-			break;
-		default:
-			PanelStory1.SetActive (true);
-			PanelStory2.SetActive(false);
-			PanelStory3.SetActive(false);
-			break;
-		}
-	}
-
 	//advances scene to the specified level
     public void goToLevel(Button buttonSelected)
 	{

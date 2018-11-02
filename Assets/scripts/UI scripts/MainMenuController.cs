@@ -53,6 +53,8 @@ public class MainMenuController : MonoBehaviour {
         if (PanelLevelSelect.transform.GetChild(i).name.Contains("Level")) {
           if (currentLevel >= levelCount) {
             PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = true;
+
+
             levelCount++;
           }
           else {
@@ -92,6 +94,7 @@ public class MainMenuController : MonoBehaviour {
         switch (currentStoryPanel)
         {
             case 1:
+
                 PanelStory1.SetActive(true);
                 PanelStory2.SetActive(false);
                 PanelStory3.SetActive(false);
@@ -107,11 +110,11 @@ public class MainMenuController : MonoBehaviour {
                 PanelStory2.SetActive(false);
                 PanelStory3.SetActive(true);
                 break;
-            case 4:
+           // case 4:
                 // Show the PanelLevelSelect
-                PanelLevelSelect.SetActive(true);
-                PanelStory.SetActive(false);
-               break;
+               // PanelLevelSelect.SetActive(true);
+               // PanelStory.SetActive(false);
+             //  break;
             default:
                 PanelStory1.SetActive(true);
                 PanelStory2.SetActive(false);
@@ -123,9 +126,9 @@ public class MainMenuController : MonoBehaviour {
         PanelStory.SetActive(false);
     }
 
-    public void gotoStory(){
+    /*public void gotoStory(){
         PanelStory.SetActive(true);
-    }
+    }*/
 
 	public void goToLevelSelect()  
 	{ 
@@ -153,23 +156,33 @@ public class MainMenuController : MonoBehaviour {
 		}
 	}
 
-	//advances scene to the specified level
-	public void goToLevel(Button buttonSelected)
-	{
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
+    //advances scene to the specified level
+    public void goToLevel(Button buttonSelected)
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
 
-		string buttonName = buttonSelected.name;
-		buttonName = buttonName.Remove(0,5);					// Left with "0-1"
-		string[] sceneLocale = buttonName.Split ('-'); 
+        string buttonName = buttonSelected.name;
+        buttonName = buttonName.Remove(0, 5);                   // Left with "0-1"
+        string[] sceneLocale = buttonName.Split('-');
 
-		currentWorld = int.Parse (sceneLocale[0]);
-		currentLevel = int.Parse (sceneLocale[1]);
+        currentWorld = int.Parse(sceneLocale[0]);
+        currentLevel = int.Parse(sceneLocale[1]);
 
-		//Debug.Log(currentWorld + " " + currentLevel);
-		PlayerPrefs.SetInt("currentLevel", currentLevel);
-		PlayerPrefs.SetInt("currentWorld", currentWorld);
-		SceneManager.LoadScene("FromLevelLoadFile");
-	}
+        PlayerPrefs.SetInt("currentLevel", currentLevel);
+        PlayerPrefs.SetInt("currentWorld", currentWorld);
+
+        Debug.Log(currentWorld + " " + currentLevel);
+
+       /* if (currentWorld == 0)
+        {
+            Debug.Log("checked");
+            PanelStory.SetActive(true);
+        }*/
+      // else
+        {      
+            SceneManager.LoadScene("FromLevelLoadFile");
+        }
+    }
 		
 	public void closePanel()
 	{
