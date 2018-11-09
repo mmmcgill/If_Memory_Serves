@@ -33,11 +33,12 @@ public class HUDController : MonoBehaviour {
 
 	[SerializeField]
 	private Text levelCompleteText;
+    public GameObject cutScene, PanelStory1, PanelStory2, PanelStory3;
 
+
+    [SerializeField]
+	public GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton;
 	[SerializeField]
-	public GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, PanelStory, backwardButton;
-	[SerializeField]
-	public GameObject PanelStory1, PanelStory2, PanelStory3;
 	public int currentStoryPanel = 1;
 
 	private string[] levelCompleteFeedback = { "Excellent!", "Good job!", "You did it!", "Fantastic!", "Very good!", "Superb!", "Splendid!"};
@@ -98,11 +99,11 @@ public class HUDController : MonoBehaviour {
 	}
 
 	//Pauses the game and timescale
-	public void showPanelInfo()     
+/*public void showPanelInfo()     
 	{
 		Time.timeScale = 0.0001F; 
 		PanelInfo.SetActive(true);
-	}
+	}*/
 
 	//resumes the game from the paused state
 	public void closePanelInfo()    
@@ -200,21 +201,60 @@ public class HUDController : MonoBehaviour {
     public void closeTutorialPanel(){
         PanelTutorial.SetActive(false);
     }
-		
-   // public void showPanelInstruct2()
-    //{
-        //Time.timeScale = 0.0001F; 
-     //   PanelInstruct.SetActive(true);
-      //  PanelInstruct1.SetActive(false);
-       // PanelInstruct2.SetActive(true);
-    //}
 
-   // public void closeInstruct()
-    //{
-      //  Time.timeScale = 1;  
-        //PanelInstruct.SetActive(false); 
-    //}
-  //Pauses the game and timescale
+    public void forwardCutScenePanel()
+    {
+        currentStoryPanel += 1;
+        showCutScenePanel();
+    }
+
+    public void backwardCutScenePanel()
+    {
+        currentStoryPanel -= 1;
+        showCutScenePanel();
+    }
+
+    private void showCutScenePanel()
+    {
+        // Shows game story panels 1 through 3 depending on what is selected
+        Debug.Log(currentStoryPanel);
+        switch (currentStoryPanel)
+        {
+            case 1:
+
+                PanelStory1.SetActive(true);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(false);
+                backwardButton.SetActive(true);
+                break;
+            case 2:
+                PanelStory1.SetActive(false);
+                PanelStory2.SetActive(true);
+                PanelStory3.SetActive(false);
+                break;
+            case 3:
+                PanelStory1.SetActive(false);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(true);
+                break;
+            case 4:
+                cutScene.SetActive(false);
+                PanelInfo.SetActive(true);
+                break;
+            default:
+                PanelStory1.SetActive(true);
+                PanelStory2.SetActive(false);
+                PanelStory3.SetActive(false);
+                break;
+        }
+    }
+    public void closeCutScenePanel()
+    {
+        cutScene.SetActive(false);
+        PanelInfo.SetActive(true);
+
+    }
+    //Pauses the game and timescale
     public void showPanelSettings()     
     {
         Time.timeScale = 0.0001F; 
