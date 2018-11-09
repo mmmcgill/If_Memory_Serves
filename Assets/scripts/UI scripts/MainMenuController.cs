@@ -187,8 +187,9 @@ public class MainMenuController : MonoBehaviour {
 	public void closePanel()
 	{
 		SoundManager.instance.PlaySingle(simpleButtonSFX);
-        //goToGeneric("Main");
+        goToGeneric("Main");
         PanelLevelSelect.SetActive(false);
+
 	}
 
 	#endregion
