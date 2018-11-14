@@ -14,6 +14,8 @@ public class WorldLoader : MonoBehaviour {
 
   [SerializeField]
 	public GameObject ScrollViewContent;
+    [SerializeField]
+    private Sprite lockImage;
 
   void Awake() {
     levelAssets = new Dictionary<string, TextAsset>();
@@ -69,6 +71,8 @@ public class WorldLoader : MonoBehaviour {
 	public void LoadLevelSelect() {
         string[] worldTitle = new string[] {"Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tidbits", "Main Grub"};
 		int worldY = 0;
+        int achievedWorld = PlayerPrefs.GetInt("achievedWorld");
+        int achievedLevel = PlayerPrefs.GetInt("achievedLevel");
         Color textColor = new Color();
         ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
 		GameObject[] worldPanels = new GameObject[worlds.Count];
@@ -92,7 +96,16 @@ public class WorldLoader : MonoBehaviour {
 				GameObject newButton = Instantiate(levelButton) as GameObject;
 				newButton.transform.SetParent(worldPanels[i].transform, false);
 				newButton.name = "level" + i + "-" + j; // levels[j].ToString(); This alwasy set world to 0, so not sure why
-				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
+                if ((achievedWorld * 10 + achievedLevel) < (i * 10 + j))
+                {
+                    // show the lock
+                    newButton.GetComponent<Image>().sprite = lockImage;
+                    newButton.GetComponentInChildren<Text>().text = "";
+                }
+                else
+                {
+                    newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
+                }
 				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
             }
