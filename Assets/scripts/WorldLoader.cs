@@ -17,6 +17,8 @@ public class WorldLoader : MonoBehaviour {
 
   [SerializeField]
 	public GameObject ScrollViewContent;
+    [SerializeField]
+    private Sprite lockImage;
 
   void Awake() {
     levelAssets = new Dictionary<string, TextAsset>();
@@ -72,11 +74,8 @@ public class WorldLoader : MonoBehaviour {
 	public void LoadLevelSelect() {
         string[] worldTitle = new string[] {"Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tidbits", "Main Grub"};
 		int worldY = 0;
-        int achieveWorld = PlayerPrefs.GetInt("achieveWorld");
-        int achieveLevel = PlayerPrefs.GetInt("achieveLevel");
-        Debug.Log("achieveWorld" + achieveWorld);
-        Debug.Log("achieveLevel" + achieveLevel);
-
+        int achievedWorld = PlayerPrefs.GetInt("achievedWorld");
+        int achievedLevel = PlayerPrefs.GetInt("achievedLevel");
         Color textColor = new Color();
         ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
 		GameObject[] worldPanels = new GameObject[worlds.Count];
@@ -100,13 +99,16 @@ public class WorldLoader : MonoBehaviour {
 				GameObject newButton = Instantiate(levelButton) as GameObject;
 				newButton.transform.SetParent(worldPanels[i].transform, false);
 				newButton.name = "level" + i + "-" + j; // levels[j].ToString(); This alwasy set world to 0, so not sure why
-
-                if ( (achieveWorld*10+achieveLevel)<(i*10+j)){
-                    // Show the lock 
+                if ((achievedWorld * 10 + achievedLevel) < (i * 10 + j))
+                {
+                    // show the lock
                     newButton.GetComponent<Image>().sprite = lockImage;
+                    newButton.GetComponentInChildren<Text>().text = "";
                 }
-
-				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
+                else
+                {
+                    newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
+                }
 				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
             }
