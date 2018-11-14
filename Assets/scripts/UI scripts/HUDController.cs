@@ -33,13 +33,12 @@ public class HUDController : MonoBehaviour {
 
 	[SerializeField]
 	private Text levelCompleteText;
-    public GameObject cutScene, PanelStory1, PanelStory2, PanelStory3;
-
+    public GameObject cutScene, PanelCutScene1, PanelCutScene2;
 
     [SerializeField]
-	public GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton;
+    public GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton, forwardButton;
 	[SerializeField]
-	public int currentStoryPanel = 1;
+	public int currentCutScenePanel = 1;
 
 	private string[] levelCompleteFeedback = { "Excellent!", "Good job!", "You did it!", "Fantastic!", "Very good!", "Superb!", "Splendid!"};
 
@@ -129,6 +128,7 @@ public class HUDController : MonoBehaviour {
        // PanelTutorial.SetActive(false);
     }
 
+    // Pop-up tutorial panels show texts
     IEnumerator showTextInPanel(List<string> showText, double[,] textPosition)
     {
         PanelTutorial.SetActive(true);
@@ -151,6 +151,7 @@ public class HUDController : MonoBehaviour {
         PanelTutorial.SetActive(false);
     }
 
+    // pop-up tutorial panels show up 
 	public void showTutorialPanels(){
 
         currentWorld = PlayerPrefs.GetInt("currentLevel");
@@ -174,9 +175,6 @@ public class HUDController : MonoBehaviour {
             char[] seperators = { ';' };
             string[] myTutorialText = line.Split(seperators);
 
-            //float x = float.Parse(myTutorialText[2]);
-            //float y = float.Parse(myTutorialText[3]);
-
 			if (myTutorialText.Length >0)
             {
                 Debug.Log("text found");
@@ -198,56 +196,51 @@ public class HUDController : MonoBehaviour {
             StartCoroutine(showTextInPanel(showText, textPosition));
         }
 	}
+    //close button on tutorial panel
     public void closeTutorialPanel(){
         PanelTutorial.SetActive(false);
     }
-
+    // next button on cut scene
     public void forwardCutScenePanel()
     {
-        currentStoryPanel += 1;
-        showCutScenePanel();
+            currentCutScenePanel += 1;
+            showCutScenePanel();
     }
-
+    // previous button on cut scene
     public void backwardCutScenePanel()
     {
-        currentStoryPanel -= 1;
-        showCutScenePanel();
+            currentCutScenePanel -= 1;
+            showCutScenePanel();
     }
 
     private void showCutScenePanel()
     {
-        // Shows game story panels 1 through 3 depending on what is selected
-        Debug.Log(currentStoryPanel);
-        switch (currentStoryPanel)
+        // Shows game story panels 1 through 2 depending on what is selected
+        Debug.Log(currentCutScenePanel);
+        switch (currentCutScenePanel)
         {
             case 1:
-
-                PanelStory1.SetActive(true);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(false);
-                backwardButton.SetActive(true);
+                PanelCutScene1.SetActive(true);
+                PanelCutScene2.SetActive(false);
+                backwardButton.SetActive(false);
                 break;
             case 2:
-                PanelStory1.SetActive(false);
-                PanelStory2.SetActive(true);
-                PanelStory3.SetActive(false);
+                PanelCutScene1.SetActive(false);
+                PanelCutScene2.SetActive(true);
+                backwardButton.SetActive(true);
                 break;
             case 3:
-                PanelStory1.SetActive(false);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(true);
-                break;
-            case 4:
                 cutScene.SetActive(false);
                 PanelInfo.SetActive(true);
                 break;
             default:
-                PanelStory1.SetActive(true);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(false);
+                PanelCutScene1.SetActive(true);
+                PanelCutScene2.SetActive(false);
+                backwardButton.SetActive(false);
                 break;
         }
     }
+    // close button on cut scene
     public void closeCutScenePanel()
     {
         cutScene.SetActive(false);

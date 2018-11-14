@@ -51,8 +51,7 @@ public class LevelLoader : MonoBehaviour {
     incrementTool = GameObject.Find("/incrementTool").GetComponent<Tool>();
     offsetTool = GameObject.Find("/offsetTool").GetComponent<Tool>();
     freeTool = GameObject.Find("/freeTool").GetComponent<Tool>();
-    mallocTool = GameObject.Find("/mallocTool").GetComponent<Tool>();
-   // cutScene = GameObject.Find("/canvasHUD2/CutScene").GetComponent<GameObject>();
+        mallocTool = GameObject.Find("/mallocTool").GetComponent<Tool>();
     levelController = gameObject.GetComponent<LevelController>();
     consoleController = GameObject.Find("HUD/Console").GetComponent<ConsoleController>();
     tools = new ArrayList();
@@ -66,9 +65,9 @@ public class LevelLoader : MonoBehaviour {
 
     LoadLevel(currentWorld, currentLevel);
 
-        if (currentWorld > 0){
-            cutScene.SetActive(false);
-        }
+    if (currentWorld > 0){
+       cutScene.SetActive(false);
+    }
   }
 
   void EmptyLevel() {
@@ -90,8 +89,6 @@ public class LevelLoader : MonoBehaviour {
     ampersand.Reset();
     star.Reset();
   }
-
-
 
   GameObject findAt(int x, int y) {
     return levelController.FindAt(x, y);
