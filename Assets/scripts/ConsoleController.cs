@@ -20,8 +20,7 @@ public class ConsoleController : MonoBehaviour {
 	public GameObject  PanelInfo;
 
   	public bool condensedCode;
-	public GameObject PanelPopUp, HeaderPopUp, BodyPopUp;
-    public GameObject star1, star2, star3;
+	public GameObject PanelPopUp, HeaderPopUp, BodyPopUp; 
 
   // Use this for initialization
   void Start() {
@@ -75,66 +74,9 @@ public class ConsoleController : MonoBehaviour {
     updateScoreText();
   }
 
-    IEnumerator showStars(int numStars) {
-        float pause = 1.0f;
-        yield return new WaitForSeconds(pause);
-        switch (numStars)
-        {
-            case 1:
-                star1.SetActive(true);
-                break;
-            case 2:
-                star1.SetActive(true);
-                yield return new WaitForSeconds(pause);
-                star2.SetActive(true);
-                break;
-            case 3:
-                star1.SetActive(true);
-                yield return new WaitForSeconds(pause);
-                star2.SetActive(true);
-                yield return new WaitForSeconds(pause);
-                star3.SetActive(true);
-                break;
-            default:
-                break;
-        }
-    }
-
-    public void LevelEnd() {
+  public void LevelEnd() {
 		PanelPopUp.SetActive(true);
-        star1.SetActive(false);
-        star2.SetActive(false);
-        star3.SetActive(false);
-
-        // Set stars, then save them to player prefs for this level
-        Debug.Log("score text is " + scoreText.text);
-        Debug.Log("par is " + levelController.Current.par);
-
-        float tempPercent = levelController.Current.par / (instructionCount * 1.0f);
-        int numStars;
-
-        if (tempPercent >= 1) { numStars = 3; }
-        else if (tempPercent >= .4) { numStars = 2; }
-        else { numStars = 1; }
-
-        StartCoroutine(showStars(numStars));
-
-        // Save the numStars to PlayerPrefs
-        int[] starsArray = new int[4];
-        int currentWorld = PlayerPrefs.GetInt("currentWorld");
-        int currentLevel = PlayerPrefs.GetInt("currentLevel");
-
-        starsArray = PlayerPrefsX.GetIntArray("NumStars-World-" + currentWorld);
-        for (int j = 0; j < 4; j++)
-        {
-            if (j==currentLevel) {
-                starsArray[j] = numStars;
-            }
-            Debug.Log(j +": " +starsArray[j]);
-        }
-        PlayerPrefsX.SetIntArray("NumStars-World-" + currentWorld, starsArray);
-
-        HeaderPopUp.GetComponent<Text>().text = positiveAffirmations[Random.Range(0,positiveAffirmations.Length)];
+		HeaderPopUp.GetComponent<Text>().text = positiveAffirmations[Random.Range(0,positiveAffirmations.Length)];
 		instructionBodyText2.text = ""; //levelController.Current.world.ToString() + "-"
    			 //+ levelController.Current.level.ToString() + ": Press = for next level!";
 
