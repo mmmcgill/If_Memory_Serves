@@ -9,9 +9,6 @@ public class WorldLoader : MonoBehaviour {
   public Dictionary<int, int> worlds;
 	private int world;
 
- [SerializeField]
-  private Sprite lockImage;
-
   [SerializeField]
   private GameObject levelButton, worldPanel, worldText;
 

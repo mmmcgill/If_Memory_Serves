@@ -3278,6 +3278,7 @@ MonoBehaviour:
   worldPanel: {fileID: 0}
   worldText: {fileID: 0}
   ScrollViewContent: {fileID: 0}
+  lockImage: {fileID: 0}
 --- !u!1001 &1862827813
 Prefab:
   m_ObjectHideFlags: 0
