@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1565910180119646
 GameObject:
   m_ObjectHideFlags: 1
@@ -519,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1628646877459264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2090,7 @@ MonoBehaviour:
     type: 2}
   worldPanel: {fileID: 1703838034504848, guid: f0e316e6e92dd466480573bfd6b195ab, type: 2}
   worldText: {fileID: 1524063706932852, guid: b4748b1f9e50243a593b6e0cdc71503b, type: 2}
+  lockImage: {fileID: 21300056, guid: a3bbaaab8f5f5436a8f5d279f9ab3432, type: 3}
   ScrollViewContent: {fileID: 1910585139611458}
 --- !u!114 &114609612782318908
 MonoBehaviour:
@@ -3439,7 +3440,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: 10, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3728,7 +3729,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3984,8 +3985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 0}
-  m_SizeDelta: {x: 42.5, y: 450}
+  m_AnchoredPosition: {x: -31.5, y: 0}
+  m_SizeDelta: {x: 64.7, y: 450}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &224887197281547374
 RectTransform:
@@ -4100,7 +4101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 149}
+  m_AnchoredPosition: {x: 0, y: 134}
   m_SizeDelta: {x: 1000, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224945157703005804

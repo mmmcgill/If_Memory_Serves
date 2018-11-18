@@ -12,6 +12,9 @@ public class WorldLoader : MonoBehaviour {
   [SerializeField]
   private GameObject levelButton, worldPanel, worldText;
 
+    [SerializeField]
+    private Sprite lockImage;
+
   [SerializeField]
 	public GameObject ScrollViewContent;
 
