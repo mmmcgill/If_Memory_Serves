@@ -2086,6 +2086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b18ce0b5bd594bdea5c114d372d7bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockImage: {fileID: 21300056, guid: a3bbaaab8f5f5436a8f5d279f9ab3432, type: 3}
   levelButton: {fileID: 1924765153302244, guid: 0bafb75cc4a7f484d99f608a7f988f67,
     type: 2}
   worldPanel: {fileID: 1703838034504848, guid: f0e316e6e92dd466480573bfd6b195ab, type: 2}
