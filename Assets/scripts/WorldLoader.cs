@@ -104,9 +104,17 @@ public class WorldLoader : MonoBehaviour {
                 if ( (achieveWorld*10+achieveLevel)<(i*10+j)){
                     // Show the lock 
                     newButton.GetComponent<Image>().sprite = lockImage;
+                    newButton.GetComponentInChildren<Text>().text = "";
+                    GameObject star1 = levelButton.gameObject.transform.Find("Star1").gameObject;  //.transform.Find("Star1");
+                    star1.SetActive(false);
+                    GameObject star2 = levelButton.gameObject.transform.Find("Star2").gameObject;
+                    star2.SetActive(false);
+                    GameObject star3 = levelButton.gameObject.transform.Find("Star3").gameObject;
+                    star3.SetActive(false);
                 }
-
-				newButton.GetComponentInChildren<Text>().text = (j+1)+"";
+                else{
+                    newButton.GetComponentInChildren<Text>().text = (j + 1)+"";
+                }
 				Vector2	newButtonPos = new Vector2(175*j-110,0);
 				newButton.transform.localPosition = newButtonPos;
             }
