@@ -2091,6 +2091,7 @@ MonoBehaviour:
     type: 2}
   worldPanel: {fileID: 1703838034504848, guid: f0e316e6e92dd466480573bfd6b195ab, type: 2}
   worldText: {fileID: 1524063706932852, guid: b4748b1f9e50243a593b6e0cdc71503b, type: 2}
+  lockImage: {fileID: 21300056, guid: a3bbaaab8f5f5436a8f5d279f9ab3432, type: 3}
   ScrollViewContent: {fileID: 1910585139611458}
 --- !u!114 &114609612782318908
 MonoBehaviour:
