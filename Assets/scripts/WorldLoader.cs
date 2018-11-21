@@ -179,6 +179,7 @@ public class WorldLoader : MonoBehaviour
                     star1Outline.SetActive(false);
                     star2Outline.SetActive(false);
                     star3Outline.SetActive(false);
+                    newButton.GetComponent<Button>().interactable = false;
                 }
                 Vector2 newButtonPos = new Vector2(175 * j - 110, 0);
                 newButton.transform.localPosition = newButtonPos;
