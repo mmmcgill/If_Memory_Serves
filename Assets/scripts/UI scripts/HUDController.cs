@@ -59,28 +59,29 @@ public class HUDController : MonoBehaviour {
 		Time.timeScale = 1;
 
 		// Get saved world and level or assign initial world and level
-		if (!(PlayerPrefs.HasKey("achievedWorld"))) 
+	/*	if (!(PlayerPrefs.HasKey("achievedWorld"))) 
 		{
-			PlayerPrefs.SetInt("achievedWorld", 1);
-			PlayerPrefs.SetInt("achievedLevel", 1);
+            PlayerPrefs.SetInt("achievedWorld", -1); 
+            PlayerPrefs.SetInt("achievedLevel", -1);
             int[] starsArray = new int[4];
 
             for (int i = 0; i < 6; i++)
             {
                 for (int j = 1; j < 5; j++)
                 {
-                    starsArray[j-1] = 0;
+                    starsArray[j - 1] = 0;
                 }
                 PlayerPrefsX.SetIntArray("NumStars-World-" + i, starsArray);
             }
-        }
+        } */
         achievedWorld = PlayerPrefs.GetInt("achievedWorld");
 		achievedLevel = PlayerPrefs.GetInt("achievedLevel");
 		levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
 
 	}
 
-	void Start()
+
+    void Start()
 	{
 		
 		anim = PanelToggle.GetComponent<Animator>();
@@ -156,7 +157,7 @@ public class HUDController : MonoBehaviour {
 
             //show up one of the value in txt
             index++;
-            yield return new WaitForSeconds(8.0f);
+            yield return new WaitForSeconds(4.0f);
         }
         PanelTutorial.SetActive(false);
     }
