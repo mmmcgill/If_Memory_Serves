@@ -24,9 +24,14 @@ public class WorldLoader : MonoBehaviour
         levelAssets = new Dictionary<string, TextAsset>();
         worlds = new Dictionary<int, int>();
         LoadWorlds();
+    }
+
+    void Start()
+    {
+
         if (ScrollViewContent != null)
         {
-            LoadLevelSelect();
+             LoadLevelSelect();
         }
     }
 
@@ -83,12 +88,19 @@ public class WorldLoader : MonoBehaviour
     // This loads (dynamically) the grid on the level select screen.
     public void LoadLevelSelect()
     {
+
+        // Remove the current worlds, then reload
+        foreach (Transform child in ScrollViewContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         string[] worldTitle = new string[] { "Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tapas", "Main Grub" };
         int worldY = 0;
-        int achievedWorld = PlayerPrefs.GetInt("achieveWorld");
-        int achievedLevel = PlayerPrefs.GetInt("achieveLevel");
-        Debug.Log("achieveWorld" + achievedWorld);
-        Debug.Log("achieveLevel" + achievedLevel);
+        int achievedWorld = PlayerPrefs.GetInt("achievedWorld");
+        int achievedLevel = PlayerPrefs.GetInt("achievedLevel");
+        Debug.Log("Level Load achievedWorld" + achievedWorld);
+        Debug.Log("Level Load achievedLevel" + achievedLevel);
 
         Color textColor = new Color();
         ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
@@ -103,9 +115,7 @@ public class WorldLoader : MonoBehaviour
             // NumStars-World-1[levelnum]
             // etc.
             starsArray = PlayerPrefsX.GetIntArray("NumStars-World-" + i);
-            // PlayerPrefsX.SetIntArray("NumStars-World-" + currentWorld, starsArray);
 
-            Debug.Log("i is " + i + " and # of stars for first level is " + starsArray[0]);
             // Create a panel
             worldPanels[i] = Instantiate(worldPanel) as GameObject;
             worldPanels[i].transform.SetParent(ScrollViewContent.transform, false);
@@ -118,7 +128,7 @@ public class WorldLoader : MonoBehaviour
             newText.GetComponent<Text>().text = worldTitle[i];
             Vector2 newTextPos = new Vector2(-345, 0);
             newText.transform.localPosition = newTextPos;
-
+            
             for (int j = 0; j < worlds[i]; j++)
             {
                 GameObject newButton = Instantiate(levelButton) as GameObject;
@@ -131,11 +141,20 @@ public class WorldLoader : MonoBehaviour
                 GameObject star2Outline = newButton.gameObject.transform.Find("Star2Outline").gameObject;
                 GameObject star3Outline = newButton.gameObject.transform.Find("Star3Outline").gameObject;
 
-                int worldLevelCombo = achievedWorld * 10 + achievedLevel;
-                int combo = i * 10 + j;
-                Debug.Log(worldLevelCombo + ", " + combo);
+                if (achievedLevel==-1 && i==0 && j==0)
+                {
+                    newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
 
-                if (starsArray[j] > 0 || (j>0 && starsArray[j-1]>0))
+                    // set up the stars
+                    star1Outline.SetActive(true);
+                    star2Outline.SetActive(true);
+                    star3Outline.SetActive(true);
+                    star1.SetActive(false);
+                    star2.SetActive(false);
+                    star3.SetActive(false);
+
+                }
+                else if (starsArray[j] > 0 || (j > 0 && starsArray[j - 1] > 0))
                 {
                     newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
 
@@ -157,6 +176,9 @@ public class WorldLoader : MonoBehaviour
                     star1.SetActive(false);
                     star2.SetActive(false);
                     star3.SetActive(false);
+                    star1Outline.SetActive(false);
+                    star2Outline.SetActive(false);
+                    star3Outline.SetActive(false);
                 }
                 Vector2 newButtonPos = new Vector2(175 * j - 110, 0);
                 newButton.transform.localPosition = newButtonPos;

@@ -86,6 +86,11 @@ public class ConsoleController : MonoBehaviour
 
     public void LevelEnd()
     {
+        int currentWorld = PlayerPrefs.GetInt("currentWorld");
+        int currentLevel = PlayerPrefs.GetInt("currentLevel");
+
+        PlayerPrefs.SetInt("achievedWorld", currentWorld);
+        PlayerPrefs.SetInt("achievedLevel", currentLevel);
 
         PanelPopUp.SetActive(true);
         Star1Fill.SetActive(false);
@@ -103,23 +108,15 @@ public class ConsoleController : MonoBehaviour
 
         // Save the numStars to PlayerPrefs
         int[] starsArray = new int[4];
-        int currentWorld = PlayerPrefs.GetInt("currentWorld");
-        int currentLevel = PlayerPrefs.GetInt("currentLevel");
+
+
 
         starsArray = PlayerPrefsX.GetIntArray("NumStars-World-" + currentWorld);
-        for (int j = 0; j < 4; j++)
-        {
-            if (j == currentLevel)
-            {
-                starsArray[j] = numStars;
-            }
-            Debug.Log(j + ": " + starsArray[j]);
-        }
+        starsArray[currentLevel] = numStars;
         PlayerPrefsX.SetIntArray("NumStars-World-" + currentWorld, starsArray);
 
         HeaderPopUp.GetComponent<Text>().text = positiveAffirmations[Random.Range(0, positiveAffirmations.Length)];
         instructionBodyText2.text = "";
-
 
         panelAllCode.SetActive(true);
     }

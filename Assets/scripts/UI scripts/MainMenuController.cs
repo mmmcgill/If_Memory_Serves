@@ -3,158 +3,151 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour {
+public class MainMenuController : MonoBehaviour
+{
 
-	#region Variables
+    #region Variables
 
-	// Audio
+    // Audio
 
-	[SerializeField]
-	public GameObject PanelLevelSelect, loadingPanel, PanelStory, backwardButton, PanelInfo;
+    [SerializeField]
+    private GameObject PanelLevelSelect, PanelLoading, PanelStory, backwardButton;
     public GameObject PanelStory1, PanelStory2, PanelStory3;
 
     [SerializeField]
-	public GameObject UICanvas;
+    public GameObject UICanvas;
 
-	private int currentLevel;
-	private int currentWorld;
-	private int achievedLevel;
-	private int achievedWorld;
+    private int currentLevel;
+    private int currentWorld;
+    private int achievedLevel;
+    private int achievedWorld;
 
     public int currentStoryPanel = 1;
 
     public AudioClip simpleButtonSFX;
 
-	//private LevelManager levelManager;
-	#endregion
+    //private LevelManager levelManager;
+    #endregion
 
-	#region Unity Event Functions
-	void Awake() {
-    Time.timeScale = 1;
+    #region Unity Event Functions
+    void Awake()
+    {
+        Time.timeScale = 1;
 
-    // Get saved world and level or assign initial world and level
-    if (!(PlayerPrefs.HasKey("achievedWorld"))) {
-      PlayerPrefs.SetInt("achievedWorld", 1);
-      PlayerPrefs.SetInt("achievedLevel", 1);
+        // Get saved world and level or assign initial world and level
+        if (!(PlayerPrefs.HasKey("achievedWorld")))
+        {
+            resetGame();
+        }
+
+
+        achievedWorld = PlayerPrefs.GetInt("achievedWorld");
+        achievedLevel = PlayerPrefs.GetInt("achievedLevel");
+        currentWorld = 1;
+        currentLevel = 1;
+
+        string sceneName = SceneManager.GetActiveScene().name;     // "level 0-1" for example
+
+      // if (PanelLevelSelect != null)
+      //  {
+            // Set all levels to disabled
+            int levelCount = 1;
+            for (int i = 0; i < PanelLevelSelect.transform.childCount; i++)
+            {
+                if (PanelLevelSelect.transform.GetChild(i).name.Contains("Level"))
+                {
+                    if (currentLevel >= levelCount)
+                    {
+                        PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = true;
+
+
+                        levelCount++;
+                    }
+                    else
+                    {
+                        PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = false;
+                    }
+                }
+            }
+      //  }
+
     }
-    achievedWorld = PlayerPrefs.GetInt("achievedWorld");
-    achievedLevel = PlayerPrefs.GetInt("achievedLevel");
-    currentWorld = 1;
-    currentLevel = 1;
 
-    string sceneName = SceneManager.GetActiveScene().name;     // "level 0-1" for example
+    public void resetGame() {
+        Debug.Log("Resetting game");
+        PlayerPrefs.SetInt("achievedWorld", -1);
+        PlayerPrefs.SetInt("achievedLevel", -1);
 
-    if (PanelLevelSelect != null) {
-      // Set all levels to disabled
-      int levelCount = 1;
-      for (int i = 0; i < PanelLevelSelect.transform.childCount; i++) {
-        //Debug.Log("currentLevel is " + currentLevel);
+        int[] starsArray = new int[4];
 
-        if (PanelLevelSelect.transform.GetChild(i).name.Contains("Level")) {
-          if (currentLevel >= levelCount) {
-            PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = true;
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 1; j < 5; j++)
+            {
+                starsArray[j - 1] = 0;
+            }
+            PlayerPrefsX.SetIntArray("NumStars-World-" + i, starsArray);
+        }
+        // Set all levels to disabled
+        int levelCount = 1;
+        for (int i = 0; i < PanelLevelSelect.transform.childCount; i++)
+        {
+            if (PanelLevelSelect.transform.GetChild(i).name.Contains("Level"))
+            {
+                if (currentLevel >= levelCount)
+                {
+                    PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = true;
+                    levelCount++;
+                }
+                else
+                {
+                    PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = false;
+                }
+            }
+        }
 
-
-            levelCount++;
-          }
-          else {
-            PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = false;
-          }
-        }		
-      }
     }
 
-	}
-
-	void Start()
-	{
-	}
+    void Start()
+    {
+    }
 
     #endregion
 
     #region Public Functions
-    //restarts the level
 
-    public void forwardStoryPanel()
+    public void goToLevelSelect()
     {
-        currentStoryPanel += 1;
-        showStoryPanel();
+        // Create the buttons on the screen
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("Level");
     }
 
-    public void backwardStoryPanel()
+    public void goToAbout()
     {
-        currentStoryPanel -= 1;
-        showStoryPanel();
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("About");
     }
 
-    private void showStoryPanel()
+    public void goToSettings()
     {
-        // Shows game story panels 1 through 3 depending on what is selected
-        Debug.Log(currentStoryPanel);
-        switch (currentStoryPanel)
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("Settings");
+    }
+
+
+    //goes to the panelName screen
+    public void goToGeneric(string panelName)
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+
+        for (int i = 0; i < UICanvas.transform.childCount; i++)
         {
-            case 1:
-
-                PanelStory1.SetActive(true);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(false);
-                backwardButton.SetActive(true);
-                break;
-            case 2:
-                PanelStory1.SetActive(false);
-                PanelStory2.SetActive(true);
-                PanelStory3.SetActive(false);
-                break;
-            case 3:
-                PanelStory1.SetActive(false);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(true);
-                break;
-           // case 4:
-                // Show the PanelLevelSelect
-               // PanelLevelSelect.SetActive(true);
-               // PanelStory.SetActive(false);
-             //  break;
-            default:
-                PanelStory1.SetActive(true);
-                PanelStory2.SetActive(false);
-                PanelStory3.SetActive(false);
-                break;
+            if (UICanvas.transform.GetChild(i).name.Contains(panelName))
+            { UICanvas.transform.GetChild(i).gameObject.SetActive(true); }
+            else { UICanvas.transform.GetChild(i).gameObject.SetActive(false); };
         }
     }
-    public void closeStoryPanel(){
-        PanelStory.SetActive(false);
-    }
-
-    /*public void gotoStory(){
-        PanelStory.SetActive(true);
-    }*/
-
-	public void goToLevelSelect()  
-	{ 
-		// Create the buttons on the screen
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
-		goToGeneric("Level");  
-	}
-
-	public void goToAbout()       
-	{  		
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
-		goToGeneric("About");  
-	}
-
-	//goes to the world select screen
-	public void goToGeneric(string panelName)
-	{
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
-
-		for (int i = 0; i < UICanvas.transform.childCount; i++)
-		{
-			if (UICanvas.transform.GetChild(i).name.Contains(panelName))
-			{ UICanvas.transform.GetChild(i).gameObject.SetActive(true); }
-			else { UICanvas.transform.GetChild(i).gameObject.SetActive(false); };
-		}
-	}
 
     //advances scene to the specified level
     public void goToLevel(Button buttonSelected)
@@ -171,42 +164,35 @@ public class MainMenuController : MonoBehaviour {
         PlayerPrefs.SetInt("currentLevel", currentLevel);
         PlayerPrefs.SetInt("currentWorld", currentWorld);
 
-        Debug.Log(currentWorld + " " + currentLevel);
+        SceneManager.LoadScene("FromLevelLoadFile");
+    }
 
-       /* if (currentWorld == 0)
+    public void closePanel()
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("Main");
+        if (!(PanelLevelSelect == null))
         {
-            Debug.Log("checked");
-            PanelStory.SetActive(true);
-        }*/
-      // else
-        {      
-            SceneManager.LoadScene("FromLevelLoadFile");
+            PanelLevelSelect.SetActive(false);
         }
     }
-		
-	public void closePanel()
-	{
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
-        goToGeneric("Main");
-        PanelLevelSelect.SetActive(false);
 
-	}
+    #endregion
 
-	#endregion
+    #region Private Functions
 
-	#region Private Functions
+    public void playButtonSound()
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+    }
 
-	public void playButtonSound(){
-		SoundManager.instance.PlaySingle(simpleButtonSFX);
-	}
-		
-	public void goToEULA()
-	{
-	}
+    public void goToEULA()
+    {
+    }
 
-	public void goToPrivacy()
-	{
-	}
+    public void goToPrivacy()
+    {
+    }
 
-	#endregion
+    #endregion
 }
