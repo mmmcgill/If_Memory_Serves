@@ -83,7 +83,7 @@ public class WorldLoader : MonoBehaviour
     // This loads (dynamically) the grid on the level select screen.
     public void LoadLevelSelect()
     {
-        string[] worldTitle = new string[] { "Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tidbits", "Main Grub" };
+        string[] worldTitle = new string[] { "Coffee Break", "Just Desserts", "Rise and Shine", "High Noon", "Tapas", "Main Grub" };
         int worldY = 0;
         int achievedWorld = PlayerPrefs.GetInt("achieveWorld");
         int achievedLevel = PlayerPrefs.GetInt("achieveLevel");
@@ -93,7 +93,6 @@ public class WorldLoader : MonoBehaviour
         Color textColor = new Color();
         ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
         GameObject[] worldPanels = new GameObject[worlds.Count];
-        bool previousLevelHasStars = true;
 
         for (int i = 0; i < worlds.Count; i++)
         {
@@ -138,9 +137,8 @@ public class WorldLoader : MonoBehaviour
 
                 if (starsArray[j] > 0 || (j>0 && starsArray[j-1]>0))
                 {
-                    // if (worldLevelCombo<(i*10+j)){
-
                     newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
+
                     // set up the stars
                     star1Outline.SetActive(true);
                     star2Outline.SetActive(true);
@@ -150,7 +148,6 @@ public class WorldLoader : MonoBehaviour
                     if (starsArray[j] >= 2) { star2.SetActive(true); star2Outline.SetActive(false); }
                     if (starsArray[j] >= 3) { star3.SetActive(true); star3Outline.SetActive(false); }
 
-                    previousLevelHasStars = true;
                 }
                 else
                 {
@@ -160,7 +157,6 @@ public class WorldLoader : MonoBehaviour
                     star1.SetActive(false);
                     star2.SetActive(false);
                     star3.SetActive(false);
-                    previousLevelHasStars = false;
                 }
                 Vector2 newButtonPos = new Vector2(175 * j - 110, 0);
                 newButton.transform.localPosition = newButtonPos;
