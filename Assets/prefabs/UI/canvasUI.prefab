@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49803922, g: 0.30588236, b: 0.039215688, a: 1}
+  m_Color: {r: 0.40784314, g: 0.14117648, b: 0.24705882, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2800,7 +2800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: if memory serves
+  m_Text: If Memory Serves
 --- !u!114 &114950749549695354
 MonoBehaviour:
   m_ObjectHideFlags: 1
