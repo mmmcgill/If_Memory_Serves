@@ -8,32 +8,27 @@ public class MainMenuController : MonoBehaviour
 
     #region Variables
 
-    // Audio
+    [SerializeField]
+    private GameObject PanelMain, PanelLevelSelect, PanelSettings;
 
     [SerializeField]
-    private GameObject PanelLevelSelect, PanelLoading, PanelStory, backwardButton;
-    public GameObject PanelStory1, PanelStory2, PanelStory3;
-
-    [SerializeField]
-    public GameObject UICanvas;
+    private GameObject UICanvas;
 
     private int currentLevel;
     private int currentWorld;
     private int achievedLevel;
     private int achievedWorld;
 
-    public int currentStoryPanel = 1;
+    // Audio
+    [SerializeField]
+    private AudioClip simpleButtonSFX;
 
-    public AudioClip simpleButtonSFX;
-
-    //private LevelManager levelManager;
     #endregion
 
     #region Unity Event Functions
     void Awake()
     {
         Time.timeScale = 1;
-
         // Get saved world and level or assign initial world and level
         if (!(PlayerPrefs.HasKey("achievedWorld")))
         {
@@ -46,8 +41,6 @@ public class MainMenuController : MonoBehaviour
         currentWorld = 1;
         currentLevel = 1;
 
-        string sceneName = SceneManager.GetActiveScene().name;     // "level 0-1" for example
-
       // if (PanelLevelSelect != null)
       //  {
             // Set all levels to disabled
@@ -59,8 +52,6 @@ public class MainMenuController : MonoBehaviour
                     if (currentLevel >= levelCount)
                     {
                         PanelLevelSelect.transform.GetChild(i).GetComponent<Button>().interactable = true;
-
-
                         levelCount++;
                     }
                     else
@@ -71,6 +62,21 @@ public class MainMenuController : MonoBehaviour
             }
       //  }
 
+        // Not the cleanest way to do this, but it works.
+        if (PlayerPrefs.HasKey("mainPanel")) {
+            if (PlayerPrefs.GetString("mainPanel")=="PanelLevelSelect") {
+                // show the panel specified
+                PanelLevelSelect.SetActive(true);
+                PanelMain.SetActive(false);
+                PlayerPrefs.SetString("mainPanel", "");
+            }
+            else if (PlayerPrefs.GetString("mainPanel") == "PanelSettings") {
+                // show the panel specified
+                PanelSettings.SetActive(true);
+                PanelMain.SetActive(false);
+                PlayerPrefs.SetString("mainPanel", "");
+            }
+        }
     }
 
     public void resetGame() {
@@ -164,7 +170,7 @@ public class MainMenuController : MonoBehaviour
         PlayerPrefs.SetInt("currentLevel", currentLevel);
         PlayerPrefs.SetInt("currentWorld", currentWorld);
 
-        SceneManager.LoadScene("FromLevelLoadFile");
+        SceneManager.LoadScene("FromLevelLoadFile"); //, LoadSceneMode.Additive);
     }
 
     public void closePanel()

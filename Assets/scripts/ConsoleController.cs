@@ -109,8 +109,6 @@ public class ConsoleController : MonoBehaviour
         // Save the numStars to PlayerPrefs
         int[] starsArray = new int[4];
 
-
-
         starsArray = PlayerPrefsX.GetIntArray("NumStars-World-" + currentWorld);
         starsArray[currentLevel] = numStars;
         PlayerPrefsX.SetIntArray("NumStars-World-" + currentWorld, starsArray);

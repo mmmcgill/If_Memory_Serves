@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 222161078376989180}
   - component: {fileID: 114933710593091612}
   m_Layer: 5
-  m_Name: New Prefab
+  m_Name: SettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
