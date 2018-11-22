@@ -83,6 +83,7 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Resetting game");
         PlayerPrefs.SetInt("achievedWorld", -1);
         PlayerPrefs.SetInt("achievedLevel", -1);
+        PlayerPrefs.SetInt("totalStars", 0);
 
         int[] starsArray = new int[4];
 

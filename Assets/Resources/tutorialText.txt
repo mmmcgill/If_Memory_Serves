@@ -1,3 +1,5 @@
-0; 0; 100; 100; Move Addy to the coffee cup using "A"-"D" and take the cup using "Q"
-0; 0; 60; 60; Give Val the cup, using "W"
-0; 0; 60; 100; Third instruction for world 1 level 1 goes here.
+0; 0; -200; -200;Move Val to the coffee cup, then grab the cup ("q").
+0; 0; 60; 60;Put the cup on Addy's counter ("w").
+0; 1; 100; 100;Help Val grab the cup ("q"). Put it on Addy's counter ("w"). 
+0; 1; 200; 200;Addy grabs the cup ("t").
+0; 1; 200; 100;Addy Magic! Copy the cup twice onto Addy's counter ("t").

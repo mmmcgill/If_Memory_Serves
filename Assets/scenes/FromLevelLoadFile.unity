@@ -377,6 +377,11 @@ Prefab:
       objectReference: {fileID: 345315884}
     - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
         type: 2}
+      propertyPath: TotalStars
+      value: 
+      objectReference: {fileID: 980568775}
+    - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
+        type: 2}
       propertyPath: Star1Fill
       value: 
       objectReference: {fileID: 980568774}
@@ -1602,6 +1607,11 @@ GameObject:
 --- !u!1 &980568774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1171102711645882, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 980568771}
+--- !u!1 &980568775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1112032462342258, guid: 8e969bdbe0da94468b6afb282c5840e6,
     type: 2}
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &1026756630

@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-More customers have arrived! Help Val get one cup of coffee to Addy.\n\nWhen no one is looking, Addy uses magic (T key)to replicate the coffee to create more. ; instructions
+More customers have arrived! Help Val get one cup of coffee to Addy.\n\nWhen no one is looking, Addy uses magic to "copy" the coffee.; instructions
 AA ; console target
 
 ; Initial Layout
@@ -39,7 +39,7 @@ par 4 ; maximum number of actions required for full reward
 
 ; Solution Code
 begin
-val = 'A';
+val = "coffee";
 a = val;
 addy = a;
 b = addy;

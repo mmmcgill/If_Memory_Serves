@@ -99,12 +99,13 @@ public class WorldLoader : MonoBehaviour
         int worldY = 0;
         int achievedWorld = PlayerPrefs.GetInt("achievedWorld");
         int achievedLevel = PlayerPrefs.GetInt("achievedLevel");
-        Debug.Log("Level Load achievedWorld" + achievedWorld);
-        Debug.Log("Level Load achievedLevel" + achievedLevel);
+        //Debug.Log("Level Load achievedWorld" + achievedWorld);
+        //Debug.Log("Level Load achievedLevel" + achievedLevel);
 
         Color textColor = new Color();
         ColorUtility.TryParseHtmlString("#7F4E0A", out textColor);
         GameObject[] worldPanels = new GameObject[worlds.Count];
+        int totalStars = 0;
 
         for (int i = 0; i < worlds.Count; i++)
         {
@@ -128,7 +129,7 @@ public class WorldLoader : MonoBehaviour
             newText.GetComponent<Text>().text = worldTitle[i];
             Vector2 newTextPos = new Vector2(-345, 0);
             newText.transform.localPosition = newTextPos;
-            
+
             for (int j = 0; j < worlds[i]; j++)
             {
                 GameObject newButton = Instantiate(levelButton) as GameObject;
@@ -141,10 +142,10 @@ public class WorldLoader : MonoBehaviour
                 GameObject star2Outline = newButton.gameObject.transform.Find("Star2Outline").gameObject;
                 GameObject star3Outline = newButton.gameObject.transform.Find("Star3Outline").gameObject;
 
-                if (achievedLevel==-1 && i==0 && j==0)
+                if (achievedLevel == -1 && i == 0 && j == 0)
                 {
+                    // Show the first level in the first world only
                     newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
-
                     // set up the stars
                     star1Outline.SetActive(true);
                     star2Outline.SetActive(true);
@@ -152,10 +153,10 @@ public class WorldLoader : MonoBehaviour
                     star1.SetActive(false);
                     star2.SetActive(false);
                     star3.SetActive(false);
-
                 }
-                else if (starsArray[j] > 0 || (j > 0 && starsArray[j - 1] > 0))
+                else if (starsArray[j] > 0 || (j > 0 && starsArray[j - 1] > 0) || (starsArray[j] == 0 && (i >= 1) && (j == 0)))
                 {
+                    // In same world
                     newButton.GetComponentInChildren<Text>().text = (j + 1) + "";
 
                     // set up the stars
@@ -166,6 +167,7 @@ public class WorldLoader : MonoBehaviour
                     if (starsArray[j] >= 1) { star1.SetActive(true); star1Outline.SetActive(false); }
                     if (starsArray[j] >= 2) { star2.SetActive(true); star2Outline.SetActive(false); }
                     if (starsArray[j] >= 3) { star3.SetActive(true); star3Outline.SetActive(false); }
+                    totalStars += starsArray[j];
 
                 }
                 else
@@ -183,6 +185,7 @@ public class WorldLoader : MonoBehaviour
                 }
                 Vector2 newButtonPos = new Vector2(175 * j - 110, 0);
                 newButton.transform.localPosition = newButtonPos;
+                PlayerPrefs.SetInt("totalStars", totalStars);
             }
         }
     }
