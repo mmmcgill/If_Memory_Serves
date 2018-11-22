@@ -21,8 +21,11 @@ public class ConsoleController : MonoBehaviour
     public GameObject PanelInfo;
 
     public bool condensedCode;
-    public GameObject PanelPopUp, HeaderPopUp, BodyPopUp;
-    public GameObject Star1Fill, Star2Fill, Star3Fill;
+
+    [SerializeField] 
+    private GameObject PanelPopUp, HeaderPopUp, BodyPopUp, TotalStars;
+    [SerializeField]
+    private GameObject Star1Fill, Star2Fill, Star3Fill;
 
     // Use this for initialization
     void Start()
@@ -33,7 +36,7 @@ public class ConsoleController : MonoBehaviour
         panelAllCode = GameObject.Find("/canvasHUD2/PanelHUD/PanelAllCode");
         allCode = new ArrayList();
         code = GameObject.Find("/canvasHUD2/PanelHUD/PanelAllCode/Text").GetComponent<Text>();
-        scoreText = GameObject.Find("/canvasHUD2/PanelHUD/Score").GetComponent<Text>();
+        scoreText = GameObject.Find("/canvasHUD2/PanelHUD/ImageScore/Score").GetComponent<Text>();
         text.text = "";
         statusText.text = "";
         code.text = "";
@@ -121,8 +124,15 @@ public class ConsoleController : MonoBehaviour
 
     IEnumerator showStars(int numStars)
     {
-        float pause = 1.0f;
+        float pause = 0.75f;
         yield return new WaitForSeconds(pause);
+
+
+        // get current # of stars earned and show it here
+        int totalStars = PlayerPrefs.GetInt("totalStars");
+
+        TotalStars.GetComponent<Text>().text = "" + totalStars;
+
         switch (numStars)
         {
             case 1:

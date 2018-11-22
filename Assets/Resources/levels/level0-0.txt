@@ -39,7 +39,7 @@ par 2 ; maximum number of actions required for full reward
 
 ; Solution Code
 begin
-val = 'A';
+val = "coffee";
 a = val;
 end
 

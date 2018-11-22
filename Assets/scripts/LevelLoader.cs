@@ -65,7 +65,8 @@ public class LevelLoader : MonoBehaviour {
 
     LoadLevel(currentWorld, currentLevel);
 
-    if (currentWorld > 0){
+        // Show cutscene only for the first level on the first world.
+    if (currentWorld > 0 || currentLevel > 0){
        cutScene.SetActive(false);
     }
   }
@@ -137,9 +138,12 @@ public class LevelLoader : MonoBehaviour {
     if (currentWorld == worldLoader.worlds.Count) {
       currentWorld = 0;
     }
-    LoadLevel(currentWorld, currentLevel);
-    PlayerPrefs.SetInt("currentWorld", currentWorld);
-    PlayerPrefs.SetInt("currentLevel", currentLevel);
+        PlayerPrefs.SetInt("currentWorld", currentWorld);
+        PlayerPrefs.SetInt("currentLevel", currentLevel);
+        Debug.LogError("current world is " + currentWorld);
+        Debug.LogError("current level is " + currentLevel);
+        LoadLevel(currentWorld, currentLevel);
+
   }
 
 

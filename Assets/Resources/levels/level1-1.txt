@@ -42,6 +42,6 @@ par 4 ; maximum number of actions required for full reward
 begin
 addy = p;
 q = addy;
-val = 'A';
+val = "cake";
 *q = val;
 end

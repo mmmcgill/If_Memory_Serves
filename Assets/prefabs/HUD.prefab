@@ -221,6 +221,7 @@ MonoBehaviour:
   PanelPopUp: {fileID: 0}
   HeaderPopUp: {fileID: 0}
   BodyPopUp: {fileID: 0}
+  TotalStars: {fileID: 0}
   Star1Fill: {fileID: 0}
   Star2Fill: {fileID: 0}
   Star3Fill: {fileID: 0}
