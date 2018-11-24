@@ -137,7 +137,6 @@ public class HUDController : MonoBehaviour
     // pop-up tutorial panels show up 
     public void showTutorialPanels()
     {
-
         currentWorld = PlayerPrefs.GetInt("currentLevel");
         currentLevel = PlayerPrefs.GetInt("currentWorld");
 
@@ -150,13 +149,11 @@ public class HUDController : MonoBehaviour
 
         List<string> showText = new List<string>();
 
-
         double[,] textPosition = new double[5, 2];
         int index = 0;
 
         foreach (string line in text)
         {
-
             char[] seperators = { ';' };
             string[] myTutorialText = line.Split(seperators);
 
@@ -240,20 +237,20 @@ public class HUDController : MonoBehaviour
     }
 
     //Pauses the game and timescale
-    public void showPanelSettings()
-    {
-        Time.timeScale = 0.0001F;
-        PanelSettings.SetActive(true);
-    }
+   // public void showPanelSettings()
+  //  {
+   //     Time.timeScale = 0.0001F;
+        //PanelSettings.SetActive(true);
+ //  }
 
     //resumes the game from the paused state
-    public void closePanelSettings()
-    {
-        Time.timeScale = 1;
-        PanelSettings.SetActive(false);
-        SoundManager.instance.PlayBGMusic(worldMusic);
-        SoundManager.instance.PlayBGChatter(chatter);
-    }
+  //  public void closePanelSettings()
+   // {
+     //   Time.timeScale = 1;
+     //   PanelSettings.SetActive(false);
+    //    SoundManager.instance.PlayBGMusic(worldMusic);
+      //  SoundManager.instance.PlayBGChatter(chatter);
+  //  }
 
 
     //goes to main menu

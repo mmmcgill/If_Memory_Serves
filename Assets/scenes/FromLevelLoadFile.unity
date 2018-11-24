@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &15096227 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1622882225231638, guid: 8e969bdbe0da94468b6afb282c5840e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &104539900
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +340,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
+        type: 2}
+      propertyPath: textCodePlayer
+      value: 
+      objectReference: {fileID: 980568776}
+    - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
+        type: 2}
+      propertyPath: textCodeSolution
+      value: 
+      objectReference: {fileID: 980568777}
     - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
         type: 2}
       propertyPath: instructionHeaderText2
@@ -955,11 +960,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!1 &658729330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1861419472499424, guid: 8e969bdbe0da94468b6afb282c5840e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &664532118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,49 +1548,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114966678354957318, guid: 8e969bdbe0da94468b6afb282c5840e6,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1840282444}
-    - target: {fileID: 114875660144132566, guid: 8e969bdbe0da94468b6afb282c5840e6,
-        type: 2}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1658892579}
     - target: {fileID: 114920126026776538, guid: 8e969bdbe0da94468b6afb282c5840e6,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1840282444}
-    - target: {fileID: 1237096008698322, guid: 8e969bdbe0da94468b6afb282c5840e6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861419472499424, guid: 8e969bdbe0da94468b6afb282c5840e6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    - target: {fileID: 114966678354957318, guid: 8e969bdbe0da94468b6afb282c5840e6,
         type: 2}
-      propertyPath: PanelCutScene1
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1320710784}
-    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
-        type: 2}
-      propertyPath: PanelCutScene2
-      value: 
-      objectReference: {fileID: 15096227}
-    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
-        type: 2}
-      propertyPath: backwardButton
-      value: 
-      objectReference: {fileID: 658729330}
-    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
-        type: 2}
-      propertyPath: forwardButton
-      value: 
-      objectReference: {fileID: 1327886829}
+      objectReference: {fileID: 1840282444}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e969bdbe0da94468b6afb282c5840e6, type: 2}
   m_IsPrefabAsset: 0
@@ -1612,6 +1579,16 @@ GameObject:
 --- !u!1 &980568775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1112032462342258, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 980568771}
+--- !u!1 &980568776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1120017221950600, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 980568771}
+--- !u!1 &980568777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259166619278032, guid: 8e969bdbe0da94468b6afb282c5840e6,
     type: 2}
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &1026756630
@@ -1997,16 +1974,6 @@ CanvasRenderer:
 --- !u!1 &1289590923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1237096008698322, guid: 8e969bdbe0da94468b6afb282c5840e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 980568771}
---- !u!1 &1320710784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1050046685741020, guid: 8e969bdbe0da94468b6afb282c5840e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 980568771}
---- !u!1 &1327886829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1377468965943192, guid: 8e969bdbe0da94468b6afb282c5840e6,
     type: 2}
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &1336516853
@@ -2845,12 +2812,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f455589c2baa3104fb7459fa71a78b94, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1658892579 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
-    type: 2}
-  m_PrefabInternal: {fileID: 269739826}
-  m_Script: {fileID: 11500000, guid: d76dfc77b9ca215429e3299861c41442, type: 3}
 --- !u!1 &1704809989
 GameObject:
   m_ObjectHideFlags: 0

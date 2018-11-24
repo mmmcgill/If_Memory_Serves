@@ -214,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   code: {fileID: 0}
+  textCodePlayer: {fileID: 0}
+  textCodeSolution: {fileID: 0}
   instructionHeaderText2: {fileID: 0}
   instructionBodyText2: {fileID: 0}
   PanelInfo: {fileID: 0}

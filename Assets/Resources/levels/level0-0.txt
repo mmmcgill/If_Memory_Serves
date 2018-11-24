@@ -39,7 +39,9 @@ par 2 ; maximum number of actions required for full reward
 
 ; Solution Code
 begin
-val = "coffee";
+val = 'A';
 a = val;
 end
-
+swap
+'A':"coffee"
+'B':"cake"
