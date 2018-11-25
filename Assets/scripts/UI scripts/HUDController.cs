@@ -34,7 +34,7 @@ public class HUDController : MonoBehaviour
 
     [SerializeField]
     private Text levelCompleteText;
-    public GameObject cutScene, PanelCutScene1, PanelCutScene2;
+    public GameObject cutScene, PanelCutScene1, PanelCutScene2, PanelCutScene3;
 
     [SerializeField]
     private GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton, forwardButton;
@@ -105,7 +105,7 @@ public class HUDController : MonoBehaviour
     {
         Time.timeScale = 1;
         PanelInfo.SetActive(false);
-        Debug.Log(string.Format("done"));
+       // Debug.Log(string.Format("done"));
         SoundManager.instance.PlayBGMusic(worldMusic);
         SoundManager.instance.PlayBGChatter(chatter);
         showTutorialPanels();
@@ -125,7 +125,7 @@ public class HUDController : MonoBehaviour
             PanelTutorial.GetComponent<GameObject>();
 
             PanelTutorial.transform.localPosition = new Vector3((float)textPosition[index, 0], (float)textPosition[index, 1], 0.0f);
-            print(PanelTutorial.transform.position);
+           // print(PanelTutorial.transform.position);
 
             //show up one of the value in txt
             index++;
@@ -141,12 +141,9 @@ public class HUDController : MonoBehaviour
         currentLevel = PlayerPrefs.GetInt("currentWorld");
 
         // Debug.Log(string.Format("print"));
-        Debug.Log("Inside show tutorial panel**********");
         TextAsset textFile = Resources.Load("tutorialText") as TextAsset;
         string[] text = textFile.text.Split("\n"[0]);
-
-        Debug.Log("$$$$" + currentWorld + "-" + currentLevel);
-
+        
         List<string> showText = new List<string>();
 
         double[,] textPosition = new double[5, 2];
@@ -159,7 +156,6 @@ public class HUDController : MonoBehaviour
 
             if (myTutorialText.Length > 0)
             {
-                Debug.Log("text found");
                 if ((int.Parse(myTutorialText[0]) == currentWorld) && (int.Parse(myTutorialText[1]) == currentLevel))
                 {
 
@@ -203,26 +199,35 @@ public class HUDController : MonoBehaviour
     private void showCutScenePanel()
     {
         // Shows game story panels 1 through 2 depending on what is selected
-        Debug.Log(currentCutScenePanel);
+        // Debug.Log(currentCutScenePanel);
         switch (currentCutScenePanel)
         {
             case 1:
                 PanelCutScene1.SetActive(true);
                 PanelCutScene2.SetActive(false);
+                PanelCutScene3.SetActive(false);
                 backwardButton.SetActive(false);
                 break;
             case 2:
                 PanelCutScene1.SetActive(false);
                 PanelCutScene2.SetActive(true);
+                PanelCutScene3.SetActive(false);
                 backwardButton.SetActive(true);
                 break;
             case 3:
+                PanelCutScene1.SetActive(false);
+                PanelCutScene2.SetActive(false);
+                PanelCutScene3.SetActive(true);
+                backwardButton.SetActive(true);
+                break;
+            case 4:
                 cutScene.SetActive(false);
                 PanelInfo.SetActive(true);
                 break;
             default:
                 PanelCutScene1.SetActive(true);
                 PanelCutScene2.SetActive(false);
+                PanelCutScene3.SetActive(false);
                 backwardButton.SetActive(false);
                 break;
         }
