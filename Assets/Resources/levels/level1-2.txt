@@ -47,6 +47,6 @@ addy = s;
 r = addy;
 val = 'A';
 *q = val;
-val = 'B';
+val = "cake";
 *r = val;
 end

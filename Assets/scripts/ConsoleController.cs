@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,17 +13,25 @@ public class ConsoleController : MonoBehaviour
     public Text code;
     private Text scoreText;
     private int instructionCount;
-    private GameObject panelAllCode;
+
     [SerializeField]
-    public Text instructionHeaderText2, instructionBodyText2;
+    private GameObject textCodePlayer, textCodeSolution;
+
+    [SerializeField]
+    private Text instructionHeaderText2, instructionBodyText2;
 
     private ArrayList allCode;
     private string[] positiveAffirmations = new string[] { "Great work!", "Excellent!", "Order Up!", "Smooth Server!", "Sweetener and Cream!" };
     public GameObject PanelInfo;
 
     public bool condensedCode;
-    public GameObject PanelPopUp, HeaderPopUp, BodyPopUp;
-    public GameObject Star1Fill, Star2Fill, Star3Fill;
+
+    [SerializeField] 
+    private GameObject PanelPopUp, HeaderPopUp, BodyPopUp, TotalStars;
+    [SerializeField]
+    private GameObject Star1Fill, Star2Fill, Star3Fill;
+    private string codeString;
+    private bool textPlayerDone = false;
 
     // Use this for initialization
     void Start()
@@ -30,13 +39,13 @@ public class ConsoleController : MonoBehaviour
         text = GetComponent<Text>();
 
         statusText = GameObject.Find("/canvasHUD2/PanelHUD/PanelCode/Text").GetComponent<Text>();
-        panelAllCode = GameObject.Find("/canvasHUD2/PanelHUD/PanelAllCode");
         allCode = new ArrayList();
-        code = GameObject.Find("/canvasHUD2/PanelHUD/PanelAllCode/Text").GetComponent<Text>();
-        scoreText = GameObject.Find("/canvasHUD2/PanelHUD/Score").GetComponent<Text>();
+      //  code = GameObject.Find("/canvasHUD2/PanelHUD/PanelCode/Text").GetComponent<Text>();
+        scoreText = GameObject.Find("/canvasHUD2/PanelHUD/ImageScore/Score").GetComponent<Text>();
         text.text = "";
         statusText.text = "";
-        code.text = "";
+      //  code.text = "";
+        codeString = "";
         instructionCount = 0;
 
 
@@ -73,19 +82,34 @@ public class ConsoleController : MonoBehaviour
 
         text.text = "";
         statusText.text = "";
-        code.text = "";
+       // code.text = "";
+        codeString = "";
         instructionCount = 0;
         instructionHeaderText2.text = "World " + (levelController.Current.world + 1) + ", Level " + (levelController.Current.level + 1);
 
         instructionBodyText2.text = System.Text.RegularExpressions.Regex.Unescape(levelController.Current.instructions);
-        //	instructionTextOld.text = instructionText.text;
-        panelAllCode.SetActive(false);
         allCode.Clear();
         updateScoreText();
     }
 
+    public void LevelReload() {
+        textCodePlayer.GetComponent<Text>().text = "";
+        textCodeSolution.GetComponent<Text>().text = "";
+    }
+
     public void LevelEnd()
     {
+         StartCoroutine(DelayedLevelEnd());
+    }
+
+    IEnumerator DelayedLevelEnd() {
+        yield return new WaitForSeconds(1.5f);
+
+        int currentWorld = PlayerPrefs.GetInt("currentWorld");
+        int currentLevel = PlayerPrefs.GetInt("currentLevel");
+
+        PlayerPrefs.SetInt("achievedWorld", currentWorld);
+        PlayerPrefs.SetInt("achievedLevel", currentLevel);
 
         PanelPopUp.SetActive(true);
         Star1Fill.SetActive(false);
@@ -103,31 +127,51 @@ public class ConsoleController : MonoBehaviour
 
         // Save the numStars to PlayerPrefs
         int[] starsArray = new int[4];
-        int currentWorld = PlayerPrefs.GetInt("currentWorld");
-        int currentLevel = PlayerPrefs.GetInt("currentLevel");
 
         starsArray = PlayerPrefsX.GetIntArray("NumStars-World-" + currentWorld);
-        for (int j = 0; j < 4; j++)
-        {
-            if (j == currentLevel)
-            {
-                starsArray[j] = numStars;
-            }
-            Debug.Log(j + ": " + starsArray[j]);
-        }
+        starsArray[currentLevel] = numStars;
         PlayerPrefsX.SetIntArray("NumStars-World-" + currentWorld, starsArray);
 
         HeaderPopUp.GetComponent<Text>().text = positiveAffirmations[Random.Range(0, positiveAffirmations.Length)];
         instructionBodyText2.text = "";
 
+    }
 
-        panelAllCode.SetActive(true);
+    IEnumerator ShowCode(bool single, ArrayList codeToShow, Text textField) {
+        float pause = 0.5f;
+        string allLinesSolution = "";
+
+        foreach (string line in codeToShow)
+        {
+            Debug.Log("Code to show: " + line);
+            if (levelController.Current.solutionSwap.Count > 0)
+            {
+                string newLine = line;
+                foreach (string swapLine in levelController.Current.solutionSwap)
+                {
+                    string[] patterns = swapLine.Split(':');
+                    newLine = newLine.Replace(patterns[0], patterns[1]);
+                }
+                allLinesSolution += newLine + "\n";
+            }
+            else { allLinesSolution += line + "\n"; }
+            if (!single)
+            { yield return new WaitForSeconds(pause); }
+            textField.text = allLinesSolution;        
+    }
     }
 
     IEnumerator showStars(int numStars)
     {
-        float pause = 1.0f;
+        float pause = 0.85f;
         yield return new WaitForSeconds(pause);
+
+
+        // get current # of stars earned and show it here
+        int totalStars = PlayerPrefs.GetInt("totalStars");
+
+        TotalStars.GetComponent<Text>().text = "" + totalStars;
+
         switch (numStars)
         {
             case 1:
@@ -148,11 +192,22 @@ public class ConsoleController : MonoBehaviour
             default:
                 break;
         }
+
+        textPlayerDone = false;
+        Text textPlayer = textCodePlayer.GetComponent<Text>();
+        StartCoroutine(ShowCode(false, allCode, textPlayer));
+
+        yield return new WaitForSeconds(pause*allCode.Count);
+
+        Text textCode = textCodeSolution.GetComponent<Text>();
+        StartCoroutine(ShowCode(false, levelController.Current.solutionCode, textCode));
+
     }
+
     public void updateAllCodePanel()
     {
-        code.text = "";
-
+      //  code.text = "";
+        codeString = "";
         if (condensedCode)
         {
             // condense
@@ -176,21 +231,27 @@ public class ConsoleController : MonoBehaviour
                         }
                     }
                 }
-                code.text += s + "\n";
-            }
+            //    code.text += s + "\n";
+                codeString += s + "\n";
+             }
         }
         else
         {
             foreach (string s in allCode)
             {
-                code.text += s + "\n";
+            //   code.text += s + "\n";
+                codeString += s + "\n";
             }
         }
     }
 
     public void Status(string text)
     {
-        statusText.text = text;
+        ArrayList sArray = new ArrayList();
+        sArray.Add(text);
+        Debug.Log("status text: " + text);
+        StartCoroutine(ShowCode(true, sArray, statusText));
+
         allCode.Add(text);
         instructionCount++;
         updateScoreText();

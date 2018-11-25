@@ -39,10 +39,10 @@ par 6 ; maximum number of actions required for full reward
 
 ; Solution Code
 begin
-val = 'B';
+val = 'A';
 a = val;
 addy = a;
 b = addy;
-val = 'A';
+val = 'B';
 a = val;
 end

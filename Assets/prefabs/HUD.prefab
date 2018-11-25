@@ -214,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   code: {fileID: 0}
+  textCodePlayer: {fileID: 0}
+  textCodeSolution: {fileID: 0}
   instructionHeaderText2: {fileID: 0}
   instructionBodyText2: {fileID: 0}
   PanelInfo: {fileID: 0}
@@ -221,6 +223,7 @@ MonoBehaviour:
   PanelPopUp: {fileID: 0}
   HeaderPopUp: {fileID: 0}
   BodyPopUp: {fileID: 0}
+  TotalStars: {fileID: 0}
   Star1Fill: {fileID: 0}
   Star2Fill: {fileID: 0}
   Star3Fill: {fileID: 0}

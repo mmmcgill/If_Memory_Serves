@@ -4,128 +4,111 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class HUDController : MonoBehaviour {
+public class HUDController : MonoBehaviour
+{
 
-	#region Variables
+    #region Variables
 
-	// Audio
-	[SerializeField]
-	private AudioClip   worldMusic;
-	[SerializeField]
-	private AudioClip   chatter;
-	[SerializeField]
-	private AudioClip   worldVictoryMusic;
-	[SerializeField]
-	private AudioClip   worldVictorySFX;
-	[SerializeField]
-	private AudioClip   levelVictory;
-	[SerializeField]
-	private AudioClip   simpleButtonSFX;
-	[SerializeField]
+    // Audio
+    [SerializeField]
+    private AudioClip worldMusic;
+    [SerializeField]
+    private AudioClip chatter;
+    [SerializeField]
+    private AudioClip worldVictoryMusic;
+    [SerializeField]
+    private AudioClip worldVictorySFX;
+    [SerializeField]
+    private AudioClip levelVictory;
+    [SerializeField]
+    private AudioClip simpleButtonSFX;
+    [SerializeField]
 
-	private Animator anim;
+    private Animator anim;
 
-	private int currentLevel;
-	private int currentWorld;
-	private int achievedLevel;
-	private int achievedWorld;
+    private int currentLevel;
+    private int currentWorld;
+    private int achievedLevel;
+    private int achievedWorld;
     private int currentPosition;
 
-	[SerializeField]
-	private Text levelCompleteText;
+    [SerializeField]
+    private Text levelCompleteText;
     public GameObject cutScene, PanelCutScene1, PanelCutScene2;
 
     [SerializeField]
-    public GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton, forwardButton;
-	[SerializeField]
-	public int currentCutScenePanel = 1;
+    private GameObject loadingPanel, LevelPopUpPanel, PanelPause, PanelInfo, PanelToggle, ButtonToggleCode, PanelSettings, backwardButton, forwardButton;
 
-	private string[] levelCompleteFeedback = { "Excellent!", "Good job!", "You did it!", "Fantastic!", "Very good!", "Superb!", "Splendid!"};
+    [SerializeField]
+    private int currentCutScenePanel = 1;
 
-	LevelController levelController;
+    private string[] levelCompleteFeedback = { "Excellent!", "Good job!", "You did it!", "Fantastic!", "Very good!", "Superb!", "Splendid!" };
+
+    LevelController levelController;
 
 
     [SerializeField]
-    public GameObject PanelTutorial, buttonTutorial, PanelTutorialText;
+    private GameObject PanelTutorial, buttonTutorial, PanelTutorialText;
     //add another value for panel instruct text 
 
 
-	//private LevelManager levelManager;
-	#endregion
+    //private LevelManager levelManager;
+    #endregion
 
-	#region Unity Event Functions
-	void Awake()
-	{
-		Time.timeScale = 1;
-
-		// Get saved world and level or assign initial world and level
-		if (!(PlayerPrefs.HasKey("achievedWorld"))) 
-		{
-			PlayerPrefs.SetInt("achievedWorld", 1);
-			PlayerPrefs.SetInt("achievedLevel", 1);
-		}
-		achievedWorld = PlayerPrefs.GetInt("achievedWorld");
-		achievedLevel = PlayerPrefs.GetInt("achievedLevel");
-		levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
-
-	}
-
-	void Start()
-	{
-		
-		anim = PanelToggle.GetComponent<Animator>();
-		//disable it on start to stop it from playing the default animation
-		anim.enabled = false;
-
-	}
-
-	#endregion
-
-	#region Public Functions
-	//Pauses the game and timescale
-
-	public void pauseGame()     
-	{
-		Time.timeScale = 0.0001F; 
-		PanelPause.SetActive(true);
-	}
-
-	//resumes the game from the paused state
-	public void resumeGame()    
-	{
-		Time.timeScale = 1;  
-		PanelPause.SetActive(false);
-	}
-
-	//Pauses the game and timescale
-/*public void showPanelInfo()     
-	{
-		Time.timeScale = 0.0001F; 
-		PanelInfo.SetActive(true);
-	}*/
-
-	//resumes the game from the paused state
-	public void closePanelInfo()    
-	{
-		Time.timeScale = 1;  
-		PanelInfo.SetActive(false);
-        Debug.Log(string.Format("done"));
-		SoundManager.instance.PlayBGMusic(worldMusic);
-		SoundManager.instance.PlayBGChatter (chatter);
-        showTutorialPanels();
-	}
-
-    public void showPanelInstruct1( List <string> textToShow )
+    #region Unity Event Functions
+    void Awake()
     {
-        //Time.timeScale = 0.0001F; 
+        Time.timeScale = 1;
+        achievedWorld = PlayerPrefs.GetInt("achievedWorld");
+        achievedLevel = PlayerPrefs.GetInt("achievedLevel");
+        levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
 
-      // PanelTutorial.SetActive(true);
+    }
 
-        //loop to show panel instruct 
 
-        //show text for 5 seconds
+    void Start()
+    {
 
-       // PanelTutorial.SetActive(false);
+        anim = PanelToggle.GetComponent<Animator>();
+        //disable it on start to stop it from playing the default animation
+        anim.enabled = false;
+
+    }
+
+    #endregion
+
+    #region Public Functions
+    //Pauses the game and timescale
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0.0001F;
+        PanelPause.SetActive(true);
+    }
+
+    //resumes the game from the paused state
+    public void resumeGame()
+    {
+        Time.timeScale = 1;
+        PanelPause.SetActive(false);
+    }
+
+    //Pauses the game and timescale
+    /*public void showPanelInfo()     
+        {
+            Time.timeScale = 0.0001F; 
+            PanelInfo.SetActive(true);
+        }*/
+
+    //resumes the game from the paused state
+    public void closePanelInfo()
+    {
+        Time.timeScale = 1;
+        PanelInfo.SetActive(false);
+        Debug.Log(string.Format("done"));
+        SoundManager.instance.PlayBGMusic(worldMusic);
+        SoundManager.instance.PlayBGChatter(chatter);
+        showTutorialPanels();
     }
 
     // Pop-up tutorial panels show texts
@@ -141,19 +124,19 @@ public class HUDController : MonoBehaviour {
             PanelTutorialText.GetComponent<Text>().text = line;
             PanelTutorial.GetComponent<GameObject>();
 
-            PanelTutorial.transform.localPosition = new Vector3((float)textPosition[index,0], (float)textPosition[index,1], 0.0f);
+            PanelTutorial.transform.localPosition = new Vector3((float)textPosition[index, 0], (float)textPosition[index, 1], 0.0f);
             print(PanelTutorial.transform.position);
 
             //show up one of the value in txt
             index++;
-            yield return new WaitForSeconds(8.0f);
+            yield return new WaitForSeconds(4.0f);
         }
         PanelTutorial.SetActive(false);
     }
 
     // pop-up tutorial panels show up 
-	public void showTutorialPanels(){
-
+    public void showTutorialPanels()
+    {
         currentWorld = PlayerPrefs.GetInt("currentLevel");
         currentLevel = PlayerPrefs.GetInt("currentWorld");
 
@@ -162,20 +145,19 @@ public class HUDController : MonoBehaviour {
         TextAsset textFile = Resources.Load("tutorialText") as TextAsset;
         string[] text = textFile.text.Split("\n"[0]);
 
-        Debug.Log("$$$$" + currentWorld + "-"+ currentLevel);
+        Debug.Log("$$$$" + currentWorld + "-" + currentLevel);
 
-		List<string> showText = new List<string> ();
-
+        List<string> showText = new List<string>();
 
         double[,] textPosition = new double[5, 2];
         int index = 0;
 
-		foreach(string line in text) {
-            
+        foreach (string line in text)
+        {
             char[] seperators = { ';' };
             string[] myTutorialText = line.Split(seperators);
 
-			if (myTutorialText.Length >0)
+            if (myTutorialText.Length > 0)
             {
                 Debug.Log("text found");
                 if ((int.Parse(myTutorialText[0]) == currentWorld) && (int.Parse(myTutorialText[1]) == currentLevel))
@@ -190,27 +172,32 @@ public class HUDController : MonoBehaviour {
 
                 }
             }
-		}
-        if (showText.Count >0) {
+        }
+        if (showText.Count > 0)
+        {
             Debug.Log(currentWorld + "-" + currentLevel + " " + showText.Count);
             StartCoroutine(showTextInPanel(showText, textPosition));
         }
-	}
+    }
+
     //close button on tutorial panel
-    public void closeTutorialPanel(){
+    public void closeTutorialPanel()
+    {
         PanelTutorial.SetActive(false);
     }
+
     // next button on cut scene
     public void forwardCutScenePanel()
     {
-            currentCutScenePanel += 1;
-            showCutScenePanel();
+        currentCutScenePanel += 1;
+        showCutScenePanel();
     }
+
     // previous button on cut scene
     public void backwardCutScenePanel()
     {
-            currentCutScenePanel -= 1;
-            showCutScenePanel();
+        currentCutScenePanel -= 1;
+        showCutScenePanel();
     }
 
     private void showCutScenePanel()
@@ -240,6 +227,7 @@ public class HUDController : MonoBehaviour {
                 break;
         }
     }
+
     // close button on cut scene
     public void closeCutScenePanel()
     {
@@ -247,113 +235,100 @@ public class HUDController : MonoBehaviour {
         PanelInfo.SetActive(true);
 
     }
+
     //Pauses the game and timescale
-    public void showPanelSettings()     
+   // public void showPanelSettings()
+  //  {
+   //     Time.timeScale = 0.0001F;
+        //PanelSettings.SetActive(true);
+ //  }
+
+    //resumes the game from the paused state
+  //  public void closePanelSettings()
+   // {
+     //   Time.timeScale = 1;
+     //   PanelSettings.SetActive(false);
+    //    SoundManager.instance.PlayBGMusic(worldMusic);
+      //  SoundManager.instance.PlayBGChatter(chatter);
+  //  }
+
+
+    //goes to main menu
+    public void goToMainMenu()
     {
-        Time.timeScale = 0.0001F; 
-        PanelSettings.SetActive(true);
+        // loadingPanel.SetActive (true);
+        SceneManager.LoadScene("main");
     }
 
-  //resumes the game from the paused state
-    public void closePanelSettings()    
+
+    //restarts the level
+    public void restartLevel()
     {
-        Time.timeScale = 1;  
-        PanelSettings.SetActive(false);
-        SoundManager.instance.PlayBGMusic(worldMusic);
-        SoundManager.instance.PlayBGChatter (chatter);
+        GameObject.Find("TheLevel").GetComponent<LevelLoader>().ResetLevel();
     }
 
 
-	//goes to main menu
-	public void goToMainMenu()
-	{
-		// loadingPanel.SetActive (true);
-		SceneManager.LoadScene("mainMenu");
-	}
+    //advances scene to the specified level
+    public void goToMainScene(string panelName) 
+    {
+        PlayerPrefs.SetString("mainPanel", panelName);
+        SceneManager.LoadScene("main");
+    }
 
-	//reset to world 0
-	public void resetWorld()
-	{
-		SceneManager.LoadScene ("World0");
-	}
-		
-	//restarts the level
-	public void restartLevel()
-	{
-		GameObject.Find("TheLevel").GetComponent<LevelLoader>().ResetLevel();
-	}
+    public void callNextLevel()
+    {
+        levelCompleteText.text = levelCompleteFeedback[Random.Range(0, levelCompleteFeedback.Length)];
+        //AudioManager.instance.PlaySingle(false, levelVictory);
+    }
 
-	//advances scene to the specified level
-    public void goToLevel(Button buttonSelected)
-	{
-		string buttonName = buttonSelected.name;
-		buttonName = buttonName.Remove(0,5);					// Left with "0-1"
-		string[] sceneLocale = buttonName.Split ('-'); 
+    public void closePanel()
+    {
+        //	goToGeneric("Main");
+    }
 
-		currentWorld = int.Parse (sceneLocale[0]);
-		currentLevel = int.Parse (sceneLocale[1]);
+    #endregion
 
-		//Debug.Log(currentWorld + " " + currentLevel);
-		PlayerPrefs.SetInt("currentLevel", currentLevel);
-		PlayerPrefs.SetInt("currentWorld", currentWorld);
-		SceneManager.LoadScene("World0");
-		//AudioManager.instance.PlayNewMusic(worldMusic);
-	}
-		
-	public void callNextLevel()
-	{
-		levelCompleteText.text = levelCompleteFeedback[Random.Range(0, levelCompleteFeedback.Length)];
-		//StartCoroutine(displayFeedback());
-		//AudioManager.instance.PlaySingle(false, levelVictory);
-	}
+    #region Private Functions
 
-	public void closePanel()
-	{
-	//	goToGeneric("Main");
-	}
+    public void playButtonSound()
+    {
+        AudioManager.instance.PlaySingle(/*false, */simpleButtonSFX);
+    }
 
-	#endregion
+    public void goToEULA()
+    {
+    }
 
-	#region Private Functions
-
-	public void playButtonSound(){
-		AudioManager.instance.PlaySingle(/*false, */simpleButtonSFX);
-	}
-		
-	public void goToEULA()
-	{
-	}
-
-	public void goToPrivacy()
-	{
-	}
+    public void goToPrivacy()
+    {
+    }
 
 
-	public void toggleCodePanel()
-	{
+    public void toggleCodePanel()
+    {
 
-    if (!PanelToggle.activeSelf)
-		{
-			// slide it out
-			//enable the animator component
-			anim.enabled = true;
-			//play the Slidein animation
-			anim.Play("PauseMenuSlideIn");
+        if (!PanelToggle.activeSelf)
+        {
+            // slide it out
+            //enable the animator component
+            anim.enabled = true;
+            //play the Slidein animation
+            anim.Play("PauseMenuSlideIn");
 
-      PanelToggle.SetActive(true);
+            PanelToggle.SetActive(true);
 
-			//PanelToggle.transform.Translate.Ler
-			// set rotation
-			//ButtonToggleCode.transform.Rotate(180,0,0);
-			//position = false;
-		}
-		else
-		{
-			//ButtonToggleCode.transform.Rotate(180,0,0);
-			//position = true;
-      PanelToggle.SetActive(false);
-		}
-	}
- 
-	#endregion
+            //PanelToggle.transform.Translate.Ler
+            // set rotation
+            //ButtonToggleCode.transform.Rotate(180,0,0);
+            //position = false;
+        }
+        else
+        {
+            //ButtonToggleCode.transform.Rotate(180,0,0);
+            //position = true;
+            PanelToggle.SetActive(false);
+        }
+    }
+
+    #endregion
 }

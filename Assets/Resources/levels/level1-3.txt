@@ -43,10 +43,10 @@ par 8 ; maximum number of actions required for full reward
 begin
 addy = p;
 q = addy;
-val = 'A';
+val = "cake";
 *q = val;
 addy = r;
 q = addy;
-val = 'B';
+val = "pie";
 *q = val;
 end
