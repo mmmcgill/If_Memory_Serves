@@ -27,11 +27,12 @@ public class ConsoleController : MonoBehaviour
     public bool condensedCode;
 
     [SerializeField] 
-    private GameObject PanelPopUp, HeaderPopUp, BodyPopUp, TotalStars;
+    private GameObject PanelPopUp, HeaderPopUp, BodyPopUp, TotalStars, TotalGold;
+
     [SerializeField]
     private GameObject Star1Fill, Star2Fill, Star3Fill;
+
     private string codeString;
-    private bool textPlayerDone = false;
 
     // Use this for initialization
     void Start()
@@ -137,13 +138,12 @@ public class ConsoleController : MonoBehaviour
 
     }
 
-    IEnumerator ShowCode(bool single, ArrayList codeToShow, Text textField) {
+    IEnumerator ShowCode(bool single, bool checkEquality, ArrayList codeToShow, Text textField) {
         float pause = 0.5f;
         string allLinesSolution = "";
-
+        int x = 0;
         foreach (string line in codeToShow)
         {
-            Debug.Log("Code to show: " + line);
             if (levelController.Current.solutionSwap.Count > 0)
             {
                 string newLine = line;
@@ -157,8 +157,15 @@ public class ConsoleController : MonoBehaviour
             else { allLinesSolution += line + "\n"; }
             if (!single)
             { yield return new WaitForSeconds(pause); }
-            textField.text = allLinesSolution;        
-    }
+            textField.text = allLinesSolution;
+
+            // if the lines match, give gold.
+            if (x < allCode.Count && line == allCode[x].ToString())
+            {
+                TotalGold.GetComponent<Text>().text = (int.Parse(TotalGold.GetComponent<Text>().text) + 25).ToString();
+            }
+            x++;
+        }
     }
 
     IEnumerator showStars(int numStars)
@@ -171,36 +178,62 @@ public class ConsoleController : MonoBehaviour
         int totalStars = PlayerPrefs.GetInt("totalStars");
 
         TotalStars.GetComponent<Text>().text = "" + totalStars;
+        float tempGold = 0;
+        float starGold = 100;
 
         switch (numStars)
         {
             case 1:
                 Star1Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .25f;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
                 break;
+
             case 2:
                 Star1Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .25f;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
+
                 yield return new WaitForSeconds(pause);
                 Star2Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .6f;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
                 break;
+
             case 3:
                 Star1Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .25f;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
                 yield return new WaitForSeconds(pause);
+
                 Star2Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .6f;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
                 yield return new WaitForSeconds(pause);
+
                 Star3Fill.SetActive(true);
+                Star1Fill.SetActive(true);
+                tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold;
+                PlayerPrefs.SetInt("totalGold", (int)tempGold);
+                TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");
                 break;
+
             default:
                 break;
         }
 
-        textPlayerDone = false;
         Text textPlayer = textCodePlayer.GetComponent<Text>();
-        StartCoroutine(ShowCode(false, allCode, textPlayer));
+        StartCoroutine(ShowCode(false, false, allCode, textPlayer));
 
         yield return new WaitForSeconds(pause*allCode.Count);
 
         Text textCode = textCodeSolution.GetComponent<Text>();
-        StartCoroutine(ShowCode(false, levelController.Current.solutionCode, textCode));
+        StartCoroutine(ShowCode(false, true, levelController.Current.solutionCode, textCode));
 
     }
 
@@ -249,8 +282,8 @@ public class ConsoleController : MonoBehaviour
     {
         ArrayList sArray = new ArrayList();
         sArray.Add(text);
-        Debug.Log("status text: " + text);
-        StartCoroutine(ShowCode(true, sArray, statusText));
+        // Debug.Log("status text: " + text);
+        StartCoroutine(ShowCode(true, false, sArray, statusText));
 
         allCode.Add(text);
         instructionCount++;

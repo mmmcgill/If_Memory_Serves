@@ -387,6 +387,11 @@ Prefab:
       objectReference: {fileID: 980568775}
     - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
         type: 2}
+      propertyPath: TotalGold
+      value: 
+      objectReference: {fileID: 980568778}
+    - target: {fileID: 114542466372749818, guid: 9f68de8b00b2e4c6fb4869ca37eb1d01,
+        type: 2}
       propertyPath: Star1Fill
       value: 
       objectReference: {fileID: 980568774}
@@ -1548,12 +1553,12 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114920126026776538, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    - target: {fileID: 114966678354957318, guid: 8e969bdbe0da94468b6afb282c5840e6,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1840282444}
-    - target: {fileID: 114966678354957318, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    - target: {fileID: 114920126026776538, guid: 8e969bdbe0da94468b6afb282c5840e6,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1578,7 +1583,7 @@ GameObject:
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &980568775 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1112032462342258, guid: 8e969bdbe0da94468b6afb282c5840e6,
+  m_CorrespondingSourceObject: {fileID: 1395301574603792, guid: 8e969bdbe0da94468b6afb282c5840e6,
     type: 2}
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &980568776 stripped
@@ -1589,6 +1594,11 @@ GameObject:
 --- !u!1 &980568777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1259166619278032, guid: 8e969bdbe0da94468b6afb282c5840e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 980568771}
+--- !u!1 &980568778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1112032462342258, guid: 8e969bdbe0da94468b6afb282c5840e6,
     type: 2}
   m_PrefabInternal: {fileID: 980568771}
 --- !u!1 &1026756630
