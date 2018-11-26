@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114138073935953486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,6 +224,7 @@ MonoBehaviour:
   HeaderPopUp: {fileID: 0}
   BodyPopUp: {fileID: 0}
   TotalStars: {fileID: 0}
+  TotalGold: {fileID: 0}
   Star1Fill: {fileID: 0}
   Star2Fill: {fileID: 0}
   Star3Fill: {fileID: 0}
