@@ -175,11 +175,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &607550919 stripped
+--- !u!1 &868123693 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1619452542804008, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+  m_CorrespondingSourceObject: {fileID: 1153233180333334, guid: 5bb1fd2d9c1f542cc9567826cc677125,
     type: 2}
   m_PrefabInternal: {fileID: 1500786041}
+--- !u!114 &868123696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868123693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1b8d41f5d3a4dc68d4c065643be3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &982298865
 Prefab:
   m_ObjectHideFlags: 0
@@ -222,6 +233,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba57fafeb80fe4a16951ab03c4f5b648, type: 2}
   m_IsPrefabAsset: 0
+--- !u!82 &982298866 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82384829863417160, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+    type: 2}
+  m_PrefabInternal: {fileID: 982298865}
 --- !u!1 &1307513972
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,72 +428,58 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114958542915833720, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 982298866}
     - target: {fileID: 223326593285853320, guid: 5bb1fd2d9c1f542cc9567826cc677125,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1307513976}
-    - target: {fileID: 224491384886476372, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+    - target: {fileID: 114958542915833720, guid: 5bb1fd2d9c1f542cc9567826cc677125,
         type: 2}
-      propertyPath: m_AnchorMax.x
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224491384886476372, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+    - target: {fileID: 114785777207031010, guid: 5bb1fd2d9c1f542cc9567826cc677125,
         type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224212511242350394, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224212511242350394, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575175815526562, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224939612971615894, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224939612971615894, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 134
-      objectReference: {fileID: 0}
-    - target: {fileID: 224882099870516622, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 64.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224882099870516622, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -31.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1627103404544504, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628646877459264, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1547541546729322, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114612287033844016, guid: 5bb1fd2d9c1f542cc9567826cc677125,
-        type: 2}
-      propertyPath: PanelSettings
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 607550919}
-    m_RemovedComponents: []
+      objectReference: {fileID: 982298866}
+    - target: {fileID: 114785777207031010, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_mute
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785777207031010, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785777207031010, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114847758449196646, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5bb1fd2d9c1f542cc9567826cc677125, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1656502780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1807555866376408, guid: 5bb1fd2d9c1f542cc9567826cc677125,
+    type: 2}
+  m_PrefabInternal: {fileID: 1500786041}
+--- !u!114 &1656502781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656502780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1b8d41f5d3a4dc68d4c065643be3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
