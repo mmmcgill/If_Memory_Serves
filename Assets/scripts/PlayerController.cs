@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public abstract class PlayerController : MonoBehaviour {
   public float speed;
   public string avatar;
+  public Animator charAnim;
 
   protected FootController foot;
   protected FootController head;
@@ -15,6 +16,7 @@ public abstract class PlayerController : MonoBehaviour {
   protected new Rigidbody2D rigidbody;
 
   protected PlayerController otherPlayer;
+  protected PlayerController horizontalmovement;
 //  public bool isBurden;
 //  private int otherMask;
   protected bool isLocked;
@@ -120,7 +122,9 @@ public abstract class PlayerController : MonoBehaviour {
     levelController = GameObject.Find("/TheLevel").GetComponent<LevelController>();
     head = transform.Find("head").GetComponent<FootController>();
 
-        facingright = true;
+    charAnim = GetComponent<Animator>();
+
+    facingright = true;
 
     targetCell = null;
     basePointer = null;
@@ -222,12 +226,12 @@ public abstract class PlayerController : MonoBehaviour {
     levelController.OnCollect(label);
   }
 
-  void LateUpdate() {
-//    if (isBurden) {
-//      oomph += otherPlayer.oomph;
-//    }
+ virtual public void LateUpdate() {
+        //    if (isBurden) {
+        //      oomph += otherPlayer.oomph;
+        //    }
+    charAnim.SetFloat("speed", Mathf.Abs(oomph));
     rigidbody.velocity = new Vector2(oomph * speed, rigidbody.velocity.y);
-
 
         if (oomph > 0 && !facingright)
         {
