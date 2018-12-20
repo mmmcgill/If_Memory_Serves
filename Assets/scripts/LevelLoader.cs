@@ -161,8 +161,8 @@ public class LevelLoader : MonoBehaviour
         }
         PlayerPrefs.SetInt("currentWorld", currentWorld);
         PlayerPrefs.SetInt("currentLevel", currentLevel);
-        Debug.LogError("current world is " + currentWorld);
-        Debug.LogError("current level is " + currentLevel);
+
+
         LoadLevel(currentWorld, currentLevel);
 
     }

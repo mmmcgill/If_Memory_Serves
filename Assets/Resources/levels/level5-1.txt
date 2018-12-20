@@ -52,5 +52,7 @@ p = addy;
 val = 'A';
 *p = val;
 end
+swap
+'A':"sandwich"
 
 heapArea 3 6 16 8

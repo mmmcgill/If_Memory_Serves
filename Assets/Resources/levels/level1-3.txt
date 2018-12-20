@@ -43,10 +43,13 @@ par 8 ; maximum number of actions required for full reward
 begin
 addy = p;
 q = addy;
-val = "cake";
+val = 'A';
 *q = val;
 addy = r;
 q = addy;
-val = "pie";
+val = 'B';
 *q = val;
 end
+swap
+'A':"cake"
+'B':"pie"

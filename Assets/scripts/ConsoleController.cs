@@ -93,7 +93,7 @@ public class ConsoleController : MonoBehaviour
         updateScoreText();
     }
 
-    public void LevelReload() {
+    public void ClearCodePanels() {
         textCodePlayer.GetComponent<Text>().text = "";
         textCodeSolution.GetComponent<Text>().text = "";
     }
@@ -113,6 +113,10 @@ public class ConsoleController : MonoBehaviour
         PlayerPrefs.SetInt("achievedLevel", currentLevel);
 
         PanelPopUp.SetActive(true);
+
+        textCodePlayer.GetComponent<Text>().text = "";
+        textCodeSolution.GetComponent<Text>().text = "";
+
         Star1Fill.SetActive(false);
         Star2Fill.SetActive(false);
         Star3Fill.SetActive(false);
@@ -144,12 +148,14 @@ public class ConsoleController : MonoBehaviour
         int x = 0;
         foreach (string line in codeToShow)
         {
+            Debug.Log("Number of rows to swap is " + levelController.Current.solutionSwap.Count);
             if (levelController.Current.solutionSwap.Count > 0)
             {
                 string newLine = line;
                 foreach (string swapLine in levelController.Current.solutionSwap)
                 {
                     string[] patterns = swapLine.Split(':');
+                    Debug.Log("replace " + patterns[0] + " with " + patterns[1]);
                     newLine = newLine.Replace(patterns[0], patterns[1]);
                 }
                 allLinesSolution += newLine + "\n";
@@ -292,6 +298,8 @@ public class ConsoleController : MonoBehaviour
         // not good for performance but for now this should be ok
         updateAllCodePanel();
     }
+
+
 
     public void SetCondensedCode(bool value)
     {

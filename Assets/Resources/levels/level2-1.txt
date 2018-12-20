@@ -46,3 +46,5 @@ q = addy;
 val = *p;
 *r = val;
 end
+'A':"pancakes"
+'B':"coffee"

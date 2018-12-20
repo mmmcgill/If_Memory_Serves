@@ -47,6 +47,9 @@ addy = s;
 r = addy;
 val = 'A';
 *q = val;
-val = "cake";
+val = 'B';
 *r = val;
 end
+swap
+'A':"cake"
+'B':"pie"
