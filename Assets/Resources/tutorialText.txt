@@ -3,9 +3,17 @@
 0; 1; 100; 100;Help Val grab the cup (q). Put it on Addy's counter (w). 
 0; 1; 200; 200;Addy grabs the cup (t).
 0; 1; 200; 100;Sprinkle Addy magic! Make a copy of the cup (t).
-1; 0; 100; 100; World 2, first level hint.
-1; 1; 100; 100; World2, 2nd level hint.
-2; 0; 100; 100; World3, first level hint.
-3; 0; 100; 100; World 4, first level hint.
-4; 0; 100; 100; World 5, first level hint.
-5; 0; 100; 100; World 6, first level hint.
+1; 0; 200; -200;Help Val grab the cake and send it along.
+1; 1; 140; 60;Addy now has a magical hook to move a pneumatic tube (t).
+1; 1; 100; 125;Help Addy move the tube to an opening on the counter. 
+1; 1; 200; -200;Then Val can send the cake along.
+2; 0; 100; 100;Help Addy move the tube to get the plate back from the table.
+2; 0; 200; -200;Then Val can grab the plate and place it back on the counter.
+3; 0; 100; 100;Help Val change the tube's endpoint by using her special magic (e).
+3; 0; 125; 150;Switch Val's the plate and magic bottle before trying to get the sandwich!
+3; 1; 100; 100;Now Val gets to use her magic (e) to help move the endpoint of the tube (w).
+3; 1; 125; 150;Everytime you sprinkle magic (e), the tube moves down the table a little more.
+5; 0; 100; 100;Val can magically clear a table and remove it from the restaurant.
+5; 0; 125; 125;Her magic only works when used on a green tile! 
+5; 1; 100; 100;Addy can magically create a new table. 
+5; 1; 125; 125;When Addy stands on a blue tile and uses the tool, she creates a table with a pneumatic tube. 

@@ -1,6 +1,9 @@
 ﻿; Increment pointer and then copy value from heap to stack.
 ; 1. Val increments pointer to point to B
 ; 2. Val dereferences pointer to copy B to empty stack value.
+; 
+; Addy's increment tool is used on a pipe's origin green square to rotate a pipe through positions at a table. Val has an offset tool which will temporarily redirect a pipe if Val is on top of the pipe's origin green square. It's initial value is 0 to indicate no offset, but when used on a pipe's origin green square will iterate over possible offset values at the table. Help get a piece of cake on the counter.
+;
 ; // initial code
 ; char *p;
 ; char *q = new char[2];
@@ -16,7 +19,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Addy's increment tool is used on a pipe's origin green square to rotate a pipe through positions at a table. Val has an offset tool which will temporarily redirect a pipe if Val is on top of the pipe's origin green square. It's initial value is 0 to indicate no offset, but when used on a pipe's origin green square will iterate over possible offset values at the table. Help get a piece of cake on the counter. ; instructions
+Help Val get the sandwich from the table back onto the counter. ; instructions
 B ; console target
 
 ; Initial Layout

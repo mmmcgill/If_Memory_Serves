@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Your cafe challenge is now to swap the cup of coffee and the cake. ; instructions
+Another delivery mistake. No problem!\n\nJust swap the coffee and the pancakes!  ; instructions
 BA ; console target
 
 ; Initial Layout
