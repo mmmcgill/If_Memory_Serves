@@ -9,7 +9,10 @@ public class MainMenuController : MonoBehaviour
     #region Variables
 
     [SerializeField]
-    private GameObject PanelMain, PanelLevelSelect, PanelSettings;
+    private GameObject PanelMain, PanelLevelSelect, PanelSettings, PanelAbout;
+
+    [SerializeField]
+    private GameObject PanelEula, PanelPrivacy, PanelEulaText, PanelPrivacyText; 
 
     [SerializeField]
     private GameObject UICanvas;
@@ -196,11 +199,23 @@ public class MainMenuController : MonoBehaviour
 
     public void goToEULA()
     {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("EULA");
+        PanelAbout.SetActive(false);
     }
 
     public void goToPrivacy()
     {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        goToGeneric("Privacy");
+        PanelAbout.SetActive(false);
     }
+
+    public void showAboutText(){
+        TextAsset textABout = Resources.Load("EULAtext") as TextAsset;
+
+    }
+
 
     #endregion
 }
