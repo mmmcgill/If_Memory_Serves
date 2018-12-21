@@ -1,0 +1,11 @@
+﻿0; 0; 50; -200;Move Val to the coffee cup, then grab it (q).
+0; 0; 60; 60;Put the cup on Addy's counter (w).
+0; 1; 100; 100;Help Val grab the cup (q). Put it on Addy's counter (w). 
+0; 1; 200; 200;Addy grabs the cup (t).
+0; 1; 200; 100;Sprinkle Addy magic! Make a copy of the cup (t).
+1; 0; 100; 100; World 2, first level hint.
+1; 1; 100; 100; World2, 2nd level hint.
+2; 0; 100; 100; World3, first level hint.
+3; 0; 100; 100; World 4, first level hint.
+4; 0; 100; 100; World 5, first level hint.
+5; 0; 100; 100; World 6, first level hint.

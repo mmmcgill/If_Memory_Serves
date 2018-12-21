@@ -150,7 +150,7 @@ public abstract class PlayerController : MonoBehaviour {
     Vector3 startPosition = gameObject.transform.position;
     Vector3 endPosition = gameObject.transform.position - Vector3.up * 0.1f;
     Vector3 startScale = gameObject.transform.localScale;
-    Vector3 endScale = new Vector3(1.2f, 0.8f, 1.0f);
+    Vector3 endScale = new Vector3(startScale.x*0.9f, startScale.y*0.9f, startScale.z);
 
     float startTime = Time.time;
     float targetTime = 0.1f;
