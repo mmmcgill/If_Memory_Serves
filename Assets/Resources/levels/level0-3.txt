@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Help place a cup of coffee and a piece of cake on the counter. ; instructions
+Help the Pointers sisters place a cup of coffee and a piece of cake on the counter. ; instructions
 AB ; console target
 
 ; Initial Layout
@@ -46,3 +46,6 @@ b = addy;
 val = 'B';
 a = val;
 end
+swap
+'A':"coffee"
+'B':"cake"

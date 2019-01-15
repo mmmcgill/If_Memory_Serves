@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Help put a cup of coffee on the table.; instructions
+The obstacles on the counter are piling up. Help Addy and Val get that food to the right table!; instructions
 A ; console target
 
 ; Initial Layout
@@ -48,3 +48,5 @@ addy = r
 q = addy
 *q = val;
 end
+'A':"pancakes"
+'B':"coffee"

@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-World 3 is a little different. Now you need to help Addy put a cup of coffee on the counter.; instructions
+Breakfast was sent to the wrong table. Get it back to Val, who will then put it on the counter for a later pick up.; instructions
 A ; console target
 
 ; Initial Layout
@@ -45,3 +45,6 @@ q = addy;
 val = *p;
 a = val;
 end
+swap
+'A':"pancakes"
+'B':"coffee"

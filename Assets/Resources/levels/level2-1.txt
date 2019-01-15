@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Help put a cup of coffee on the table. ; instructions
+Whoops! Pancakes were sent to the wrong table again. Help Addy and Val fix this. ; instructions
 A ; console target
 
 ; Initial Layout
@@ -46,3 +46,5 @@ q = addy;
 val = *p;
 *r = val;
 end
+'A':"pancakes"
+'B':"coffee"

@@ -137,10 +137,9 @@ public class HUDController : MonoBehaviour
     // pop-up tutorial panels show up 
     public void showTutorialPanels()
     {
-        currentWorld = PlayerPrefs.GetInt("currentLevel");
-        currentLevel = PlayerPrefs.GetInt("currentWorld");
+        currentWorld = PlayerPrefs.GetInt("currentWorld");
+        currentLevel = PlayerPrefs.GetInt("currentLevel");
 
-        // Debug.Log(string.Format("print"));
         TextAsset textFile = Resources.Load("tutorialText") as TextAsset;
         string[] text = textFile.text.Split("\n"[0]);
         

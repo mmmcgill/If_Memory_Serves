@@ -5,7 +5,7 @@
 9 ; height
 10 ; camera x
 4.5 ; camera y
-Help Addy put a cup of coffee and a piece of cake on the table. ; instructions
+What's next? An order for a second piece of pie and a second piece of cake! ; instructions
 AB ; console target
 
 ; Initial Layout
@@ -43,10 +43,13 @@ par 8 ; maximum number of actions required for full reward
 begin
 addy = p;
 q = addy;
-val = "cake";
+val = 'A';
 *q = val;
 addy = r;
 q = addy;
-val = "pie";
+val = 'B';
 *q = val;
 end
+swap
+'A':"cake"
+'B':"pie"

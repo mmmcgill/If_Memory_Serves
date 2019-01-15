@@ -48,3 +48,6 @@ c = b;
 addy = b;
 c = addy;
 end
+swap
+'A':"coffee"
+'B':"cake"
