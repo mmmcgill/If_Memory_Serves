@@ -10,12 +10,14 @@ public class MainMenuController : MonoBehaviour
 
     [SerializeField]
     private GameObject PanelMain, PanelLevelSelect, PanelSettings, PanelAbout;
+    private TextAsset textEULA = Resources.Load("EULAtext") as TextAsset;
 
     [SerializeField]
     private GameObject PanelEula, PanelPrivacy, PanelEulaText, PanelPrivacyText; 
 
     [SerializeField]
     private GameObject UICanvas;
+    private GameObject[] pause;
 
     private int currentLevel;
     private int currentWorld;
@@ -156,7 +158,6 @@ public class MainMenuController : MonoBehaviour
         {
             if (UICanvas.transform.GetChild(i).name.Contains(panelName))
             { UICanvas.transform.GetChild(i).gameObject.SetActive(true); }
-            else { UICanvas.transform.GetChild(i).gameObject.SetActive(false); };
         }
     }
 
@@ -178,25 +179,6 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("FromLevelLoadFile"); //, LoadSceneMode.Additive);
     }
 
-    public void closePanel()
-    {
-        SoundManager.instance.PlaySingle(simpleButtonSFX);
-        goToGeneric("Main");
-        if (!(PanelLevelSelect == null))
-        {
-            PanelLevelSelect.SetActive(false);
-        }
-    }
-
-    #endregion
-
-    #region Private Functions
-
-    public void playButtonSound()
-    {
-        SoundManager.instance.PlaySingle(simpleButtonSFX);
-    }
-
     public void goToEULA()
     {
         SoundManager.instance.PlaySingle(simpleButtonSFX);
@@ -211,11 +193,60 @@ public class MainMenuController : MonoBehaviour
         PanelAbout.SetActive(false);
     }
 
-    public void showAboutText(){
-        TextAsset textABout = Resources.Load("EULAtext") as TextAsset;
+    public void showEULAText()
+    {
+        TextAsset textEULA = Resources.Load("EULAtext") as TextAsset;
+        print(textEULA.text);
 
     }
 
+    public void closePanel(string panelName)
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+
+        for (int i = 0; i < UICanvas.transform.childCount; i++)
+        {
+            if (UICanvas.transform.GetChild(i).name.Contains(panelName))
+            { UICanvas.transform.GetChild(i).gameObject.SetActive(false); }
+            //else { UICanvas.transform.GetChild(i).gameObject.SetActive(true); };
+        }
+    }
+    public void closeAbout(){
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        closePanel("PanelAbout");
+    }
+
+    public void closeSetting(){
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        closePanel("PanelSetting");
+    }
+
+    public void closeLevelSelect(){
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        closePanel("PanelLevelSelect");
+    }
+
+    public void closeEULA(){
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        closePanel("PanelEULA");
+    }
+
+    public void closePrivacy(){
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        closePanel("PanelPrivacy");
+    }
+
+    #endregion
+
+    #region Private Functions
+
+    public void playButtonSound()
+    {
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+    }
+    public void Mute(){
+        AudioListener.pause = !AudioListener.pause;
+    }
 
     #endregion
 }
