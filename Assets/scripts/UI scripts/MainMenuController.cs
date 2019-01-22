@@ -1,16 +1,27 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Linq;
 
+[RequireComponent(typeof(TextMesh))]
 public class MainMenuController : MonoBehaviour
 {
 
     #region Variables
 
+    public static List<string> textEULA;
+    private TextMesh textComp;
+
+    [SerializeField]
+    public int[] rowsToReadFrom;
+    public string fileName;
+    private TextAsset textAsset;
+
     [SerializeField]
     private GameObject PanelMain, PanelLevelSelect, PanelSettings, PanelAbout;
-    private TextAsset textEULA = Resources.Load("EULAtext") as TextAsset;
 
     [SerializeField]
     private GameObject PanelEula, PanelPrivacy, PanelEulaText, PanelPrivacyText; 
@@ -123,6 +134,9 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        textAsset = Resources.Load("EULAtext") as TextAsset;
+        textComp = GetComponent<TextMesh>();
+        showEULAText();
     }
 
     #endregion
@@ -193,13 +207,18 @@ public class MainMenuController : MonoBehaviour
         PanelAbout.SetActive(false);
     }
 
+    //[MenuItem("Tools/Read file")]
     public void showEULAText()
     {
-        TextAsset textEULA = Resources.Load("EULAtext") as TextAsset;
-        print(textEULA.text);
-
+        textEULA = textAsset.text.Split('\n').ToList();
+        for (int i = 0; i < rowsToReadFrom.Length; i++){
+            if (rowsToReadFrom[0]<0|| rowsToReadFrom.Length==0){
+                textComp.text = textAsset.text;
+            }else{
+                textComp.text += textEULA[rowsToReadFrom[i]] + "\n";
+            }
+        }
     }
-
     public void closePanel(string panelName)
     {
         SoundManager.instance.PlaySingle(simpleButtonSFX);

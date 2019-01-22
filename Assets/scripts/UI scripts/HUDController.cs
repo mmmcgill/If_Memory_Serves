@@ -12,6 +12,7 @@ public class HUDController : MonoBehaviour
     // Audio
     [SerializeField]
     private AudioClip worldMusic;
+
     [SerializeField]
     private AudioClip chatter;
     [SerializeField]
@@ -105,8 +106,9 @@ public class HUDController : MonoBehaviour
     {
         Time.timeScale = 1;
         PanelInfo.SetActive(false);
-       // Debug.Log(string.Format("done"));
-        SoundManager.instance.PlayBGMusic(worldMusic);
+        // Debug.Log(string.Format("done"));
+        //SoundManager.instance.PlayBGMusic(worldBGMusic[currentWorld]);
+        SoundManager.instance.PlayBGMusic();
         SoundManager.instance.PlayBGChatter(chatter);
         showTutorialPanels();
     }

@@ -210,15 +210,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467327581698040, guid: 032d3b28ff5454b9a8946e16e37daee9, type: 2}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 223226603002926532, guid: 032d3b28ff5454b9a8946e16e37daee9,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 725048543}
+    - target: {fileID: 1467327581698040, guid: 032d3b28ff5454b9a8946e16e37daee9, type: 2}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 032d3b28ff5454b9a8946e16e37daee9, type: 2}
   m_IsPrefabAsset: 0
@@ -1729,6 +1729,36 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 187cc89266d4f48818f26521c9a42081, type: 3}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f18c29adf3cd48a4b4056e31f522bac, type: 3}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43e0dad46ce1b4865bcdddd8699d9f55, type: 3}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 79f896a1728b24a36b6be212d8f7f131, type: 3}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 796782700312344e5bd867059a490f55, type: 3}
+    - target: {fileID: 114528784838984676, guid: 8e969bdbe0da94468b6afb282c5840e6,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 187cc89266d4f48818f26521c9a42081, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e969bdbe0da94468b6afb282c5840e6, type: 2}
   m_IsPrefabAsset: 0
@@ -1935,6 +1965,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b489a2fe47fe407ca348134989dc6a0, type: 2}
   m_IsPrefabAsset: 0
+--- !u!82 &1142185633 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82384829863417160, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+    type: 2}
+  m_PrefabInternal: {fileID: 1705191376}
 --- !u!1 &1160196767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2960,21 @@ Prefab:
     - target: {fileID: 4427881302460496, guid: ba57fafeb80fe4a16951ab03c4f5b648, type: 2}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 1142185633}
+    - target: {fileID: 82483698578533364, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82130264706028482, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: BypassEffects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba57fafeb80fe4a16951ab03c4f5b648, type: 2}

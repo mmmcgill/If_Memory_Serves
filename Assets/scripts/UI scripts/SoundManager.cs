@@ -7,7 +7,10 @@ public class SoundManager : MonoBehaviour
 	public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
 	public AudioSource chatterSource;                 //Drag a reference to the audio source which will play the music.
 
-	public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
+    [SerializeField]
+    private AudioClip[] worldBGMusic = new AudioClip[6];
+
+    public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
 	public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
 	public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
 
@@ -30,10 +33,12 @@ public class SoundManager : MonoBehaviour
 	}
 
 	//Used to play single sound clips.
-	public void PlayBGMusic(AudioClip clip)
+	public void PlayBGMusic()
 	{
+        // Debug.Log("About to play BG music" + clip.name);
+        Debug.Log("Current world is " + PlayerPrefs.GetInt("currentWorld"));
 		//Set the clip of our efxSource audio source to the clip passed in as a parameter.
-		musicSource.clip = clip;
+		musicSource.clip = worldBGMusic[PlayerPrefs.GetInt("currentWorld")];
 
 		//Play the clip.
 		musicSource.Play ();
