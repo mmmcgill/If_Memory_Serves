@@ -50,6 +50,3 @@ q = addy;
 val = 'B';
 *q = val;
 end
-swap
-'A':"cake"
-'B':"pie"

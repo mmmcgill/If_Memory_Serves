@@ -46,6 +46,3 @@ b = addy;
 val = 'B';
 a = val;
 end
-swap
-'A':"coffee"
-'B':"cake"

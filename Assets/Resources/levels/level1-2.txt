@@ -50,6 +50,3 @@ val = 'A';
 val = 'B';
 *r = val;
 end
-swap
-'A':"cake"
-'B':"pie"

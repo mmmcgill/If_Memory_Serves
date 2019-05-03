@@ -48,5 +48,3 @@ addy = r
 q = addy
 *q = val;
 end
-'A':"pancakes"
-'B':"coffee"
