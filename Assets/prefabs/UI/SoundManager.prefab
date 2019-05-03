@@ -342,6 +342,13 @@ MonoBehaviour:
   efxSource: {fileID: 82384829863417160}
   musicSource: {fileID: 82483698578533364}
   chatterSource: {fileID: 82384829863417160}
+  worldBGMusic:
+  - {fileID: 8300000, guid: 187cc89266d4f48818f26521c9a42081, type: 3}
+  - {fileID: 8300000, guid: 2f18c29adf3cd48a4b4056e31f522bac, type: 3}
+  - {fileID: 8300000, guid: 43e0dad46ce1b4865bcdddd8699d9f55, type: 3}
+  - {fileID: 8300000, guid: 79f896a1728b24a36b6be212d8f7f131, type: 3}
+  - {fileID: 8300000, guid: 796782700312344e5bd867059a490f55, type: 3}
+  - {fileID: 8300000, guid: 948260b3ac1834a1da10807b8db76e00, type: 3}
   lowPitchRange: 0.95
   highPitchRange: 1.05
   buttonTap: {fileID: 8300000, guid: a4e194b73b487473ea95a84ce7b807b3, type: 3}

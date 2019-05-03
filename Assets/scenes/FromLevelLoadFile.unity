@@ -2976,6 +2976,36 @@ Prefab:
       propertyPath: BypassEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 187cc89266d4f48818f26521c9a42081, type: 3}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f18c29adf3cd48a4b4056e31f522bac, type: 3}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 43e0dad46ce1b4865bcdddd8699d9f55, type: 3}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 79f896a1728b24a36b6be212d8f7f131, type: 3}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 796782700312344e5bd867059a490f55, type: 3}
+    - target: {fileID: 114365011339647112, guid: ba57fafeb80fe4a16951ab03c4f5b648,
+        type: 2}
+      propertyPath: worldBGMusic.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 948260b3ac1834a1da10807b8db76e00, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba57fafeb80fe4a16951ab03c4f5b648, type: 2}
   m_IsPrefabAsset: 0

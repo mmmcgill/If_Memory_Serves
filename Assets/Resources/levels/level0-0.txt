@@ -42,6 +42,3 @@ begin
 val = 'A';
 a = val;
 end
-swap
-'A':"coffee"
-'B':"cake"
