@@ -159,7 +159,7 @@ public class MainMenuController : MonoBehaviour
     public void goToSettings()
     {
         SoundManager.instance.PlaySingle(simpleButtonSFX);
-        goToGeneric("Settings");
+        PanelSettings.SetActive(true);
     }
 
 
@@ -237,7 +237,9 @@ public class MainMenuController : MonoBehaviour
 
     public void closeSetting(){
         SoundManager.instance.PlaySingle(simpleButtonSFX);
-        closePanel("PanelSetting");
+        //closePanel("PanelSetting");
+        PanelSettings.SetActive(false);
+
     }
 
     public void closeLevelSelect(){

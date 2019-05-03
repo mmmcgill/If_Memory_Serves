@@ -30,7 +30,7 @@ public class ConsoleController : MonoBehaviour
     private GameObject PanelPopUp, HeaderPopUp, BodyPopUp, TotalStars, TotalGold;
 
     [SerializeField]
-    private GameObject Star1Fill, Star2Fill, Star3Fill;
+    private GameObject Star1Fill, Star2Fill, Star3Fill, LittleStar;
 
     private string codeString;
 
@@ -191,6 +191,7 @@ public class ConsoleController : MonoBehaviour
         {
             case 1:
                 Star1Fill.SetActive(true);
+                LittleStar.SetActive(true);
                 tempGold = float.Parse(TotalGold.GetComponent<Text>().text) + starGold * .25f;
                 PlayerPrefs.SetInt("totalGold", (int)tempGold);
                 TotalGold.GetComponent<Text>().text = tempGold.ToString("N0");

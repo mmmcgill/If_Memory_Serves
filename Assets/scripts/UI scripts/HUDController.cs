@@ -281,6 +281,20 @@ public class HUDController : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public void gotoPanelSetting(){
+        Time.timeScale = 0.0001F;
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        PanelSettings.SetActive(true);
+    }
+
+    public void closePanelSetting(){
+        Time.timeScale = 1;
+        SoundManager.instance.PlaySingle(simpleButtonSFX);
+        PanelSettings.SetActive(false);
+    }
+
+
+
     public void callNextLevel()
     {
         levelCompleteText.text = levelCompleteFeedback[Random.Range(0, levelCompleteFeedback.Length)];
@@ -299,15 +313,7 @@ public class HUDController : MonoBehaviour
     public void playButtonSound()
     {
         AudioManager.instance.PlaySingle(/*false, */simpleButtonSFX);
-    }
-
-    public void goToEULA()
-    {
-    }
-
-    public void goToPrivacy()
-    {
-    }
+   }
 
 
     public void toggleCodePanel()
@@ -333,6 +339,18 @@ public class HUDController : MonoBehaviour
             //ButtonToggleCode.transform.Rotate(180,0,0);
             //position = true;
             PanelToggle.SetActive(false);
+        }
+    }
+    public void toggleTutorial()
+    {
+        if (!PanelTutorial.activeSelf)
+        {
+            anim.enabled = true;
+            PanelTutorial.SetActive(true);
+        }
+        else
+        {
+            PanelTutorial.SetActive(false);
         }
     }
 
