@@ -32,6 +32,7 @@ public class HUDController : MonoBehaviour
     private int achievedLevel;
     private int achievedWorld;
     private int currentPosition;
+    private string tutorialOn;
 
     [SerializeField]
     private Text levelCompleteText;
@@ -50,6 +51,9 @@ public class HUDController : MonoBehaviour
 
     [SerializeField]
     private GameObject PanelTutorial, buttonTutorial, PanelTutorialText;
+    [SerializeField]
+    private Toggle tutorialToggle;
+
     //add another value for panel instruct text 
 
 
@@ -73,6 +77,8 @@ public class HUDController : MonoBehaviour
         anim = PanelToggle.GetComponent<Animator>();
         //disable it on start to stop it from playing the default animation
         anim.enabled = false;
+        tutorialOn = PlayerPrefs.GetString("TutorialOn");
+        Debug.Log(tutorialOn + "at start") ;
 
     }
 
@@ -110,7 +116,11 @@ public class HUDController : MonoBehaviour
         //SoundManager.instance.PlayBGMusic(worldBGMusic[currentWorld]);
         SoundManager.instance.PlayBGMusic();
         SoundManager.instance.PlayBGChatter(chatter);
-        showTutorialPanels();
+        if (PlayerPrefs.GetString ("TutorialOn") == "true")
+        {
+            showTutorialPanels();
+            Debug.Log("inside closePanelInfo: tutorialOn is " + tutorialOn);
+        }
     }
 
     // Pop-up tutorial panels show texts
@@ -141,6 +151,7 @@ public class HUDController : MonoBehaviour
     {
         currentWorld = PlayerPrefs.GetInt("currentWorld");
         currentLevel = PlayerPrefs.GetInt("currentLevel");
+
 
         TextAsset textFile = Resources.Load("tutorialText") as TextAsset;
         string[] text = textFile.text.Split("\n"[0]);
@@ -274,6 +285,7 @@ public class HUDController : MonoBehaviour
     }
 
 
+
     //advances scene to the specified level
     public void goToMainScene(string panelName) 
     {
@@ -281,15 +293,53 @@ public class HUDController : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public void resetGame()
+    {
+        Debug.Log("Resetting game");
+        PlayerPrefs.SetInt("achievedWorld", -1);
+        PlayerPrefs.SetInt("achievedLevel", -1);
+        PlayerPrefs.SetInt("totalStars", 0);
+        PlayerPrefs.SetInt("totalGold", 0);
+        PlayerPrefs.SetString("TutorialOn", "false");
+
+        int[] starsArray = new int[4];
+
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 1; j < 5; j++)
+            {
+                starsArray[j - 1] = 0;
+            }
+            PlayerPrefsX.SetIntArray("NumStars-World-" + i, starsArray);
+        }
+    }
+
+
     public void gotoPanelSetting(){
         Time.timeScale = 0.0001F;
         SoundManager.instance.PlaySingle(simpleButtonSFX);
         PanelSettings.SetActive(true);
+        if (PlayerPrefs.GetString("TutorialOn") == "true")
+        {
+            tutorialToggle.isOn = true;
+        }
+        else
+        {
+            tutorialToggle.isOn = false;
+        }
     }
 
     public void closePanelSetting(){
         Time.timeScale = 1;
         SoundManager.instance.PlaySingle(simpleButtonSFX);
+        if (tutorialToggle.isOn == true)
+        {
+            PlayerPrefs.SetString("TutorialOn", "true");
+        }
+        else
+        {
+            PlayerPrefs.SetString("TutorialOn", "false");
+        }
         PanelSettings.SetActive(false);
     }
 
@@ -341,18 +391,19 @@ public class HUDController : MonoBehaviour
             PanelToggle.SetActive(false);
         }
     }
+
     public void toggleTutorial()
     {
-        if (!PanelTutorial.activeSelf)
+        if (tutorialToggle.isOn == true)
         {
-            anim.enabled = true;
-            PanelTutorial.SetActive(true);
+            PlayerPrefs.SetString("TutorialOn", "true");
+            Debug.Log("toggle is on");
         }
-        else
+        else if (tutorialToggle.isOn == false)
         {
-            PanelTutorial.SetActive(false);
+            PlayerPrefs.SetString("TutorialOn", "false");
+            Debug.Log("toggle is off");
         }
     }
-
     #endregion
 }

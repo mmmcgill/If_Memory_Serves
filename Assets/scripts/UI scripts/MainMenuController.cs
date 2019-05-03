@@ -35,6 +35,9 @@ public class MainMenuController : MonoBehaviour
     private int achievedLevel;
     private int achievedWorld;
 
+    [SerializeField]
+    private Toggle tutorialToggle;
+
     // Audio
     [SerializeField]
     private AudioClip simpleButtonSFX;
@@ -101,6 +104,7 @@ public class MainMenuController : MonoBehaviour
         PlayerPrefs.SetInt("achievedLevel", -1);
         PlayerPrefs.SetInt("totalStars", 0);
         PlayerPrefs.SetInt("totalGold", 0);
+        PlayerPrefs.SetString("TutorialOn", "false");
 
         int[] starsArray = new int[4];
 
@@ -160,6 +164,14 @@ public class MainMenuController : MonoBehaviour
     {
         SoundManager.instance.PlaySingle(simpleButtonSFX);
         PanelSettings.SetActive(true);
+        if (PlayerPrefs.GetString("TutorialOn") == "true")
+        {
+            tutorialToggle.isOn = true;
+        }
+        else
+        {
+            tutorialToggle.isOn = false;
+        }
     }
 
 
@@ -238,6 +250,14 @@ public class MainMenuController : MonoBehaviour
     public void closeSetting(){
         SoundManager.instance.PlaySingle(simpleButtonSFX);
         //closePanel("PanelSetting");
+        if (tutorialToggle.isOn ==true)
+        {
+            PlayerPrefs.SetString("TutorialOn", "true");
+        }
+        else
+        {
+            PlayerPrefs.SetString("TutorialOn", "false");
+        }
         PanelSettings.SetActive(false);
 
     }
@@ -267,6 +287,20 @@ public class MainMenuController : MonoBehaviour
     }
     public void Mute(){
         AudioListener.pause = !AudioListener.pause;
+    }
+
+    public void toggleTutorial()
+    {
+        if (tutorialToggle.isOn == true)
+        {
+            PlayerPrefs.SetString("TutorialOn", "true");
+            Debug.Log("toggle is on");
+        }
+        else if (tutorialToggle.isOn == false)
+        {
+            PlayerPrefs.SetString("TutorialOn", "false");
+            Debug.Log("toggle is off");
+        }
     }
 
     #endregion
