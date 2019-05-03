@@ -43,6 +43,3 @@ begin
 val = 'A';
 *p = val;
 end
-swap
-'A':"cake"
-'B':"pie"

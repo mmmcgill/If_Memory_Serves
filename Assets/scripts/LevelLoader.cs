@@ -388,9 +388,9 @@ public class LevelLoader : MonoBehaviour
             {
                 swap = true;
             }
-            else if (swap) {
-                loaded.solutionSwap.Add(lines[offset+i]);
-            }
+           // else if (swap) {
+          //      loaded.solutionSwap.Add(lines[offset+i]);
+           // }
             else if (keyword == "begin")
             {
                 code = true;
