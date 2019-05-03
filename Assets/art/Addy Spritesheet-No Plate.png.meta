@@ -1,7 +1,84 @@
 fileFormatVersion: 2
 guid: 1396135e013d14254b757564bd5715c3
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Addy Spritesheet-No Plate_0
+    21300002: Addy Spritesheet-No Plate_1
+    21300004: Addy Spritesheet-No Plate_2
+    21300006: Addy Spritesheet-No Plate_3
+    21300008: Addy Spritesheet-No Plate_4
+    21300010: Addy Spritesheet-No Plate_5
+    21300012: Addy Spritesheet-No Plate_6
+    21300014: Addy Spritesheet-No Plate_7
+    21300016: Addy Spritesheet-No Plate_8
+    21300018: Addy Spritesheet-No Plate_9
+    21300020: Addy Spritesheet-No Plate_10
+    21300022: Addy Spritesheet-No Plate_11
+    21300024: Addy Spritesheet-No Plate_12
+    21300026: Addy Spritesheet-No Plate_13
+    21300028: Addy Spritesheet-No Plate_14
+    21300030: Addy Spritesheet-No Plate_15
+    21300032: Addy Spritesheet-No Plate_16
+    21300034: Addy Spritesheet-No Plate_17
+    21300036: Addy Spritesheet-No Plate_18
+    21300038: Addy Spritesheet-No Plate_19
+    21300040: Addy Spritesheet-No Plate_20
+    21300042: Addy Spritesheet-No Plate_21
+    21300044: Addy Spritesheet-No Plate_22
+    21300046: Addy Spritesheet-No Plate_23
+    21300048: Addy Spritesheet-No Plate_24
+    21300050: Addy Spritesheet-No Plate_25
+    21300052: Addy Spritesheet-No Plate_26
+    21300054: Addy Spritesheet-No Plate_27
+    21300056: Addy Spritesheet-No Plate_28
+    21300058: Addy Spritesheet-No Plate_29
+    21300060: Addy Spritesheet-No Plate_30
+    21300062: Addy Spritesheet-No Plate_31
+    21300064: Addy Spritesheet-No Plate_32
+    21300066: Addy Spritesheet-No Plate_33
+    21300068: Addy Spritesheet-No Plate_34
+    21300070: Addy Spritesheet-No Plate_35
+    21300072: Addy Spritesheet-No Plate_36
+    21300074: Addy Spritesheet-No Plate_37
+    21300076: Addy Spritesheet-No Plate_38
+    21300078: Addy Spritesheet-No Plate_39
+    21300080: Addy Spritesheet-No Plate_40
+    21300082: Addy Spritesheet-No Plate_41
+    21300084: Addy Spritesheet-No Plate_42
+    21300086: Addy Spritesheet-No Plate_43
+    21300088: Addy Spritesheet-No Plate_44
+    21300090: Addy Spritesheet-No Plate_45
+    21300092: Addy Spritesheet-No Plate_46
+    21300094: Addy Spritesheet-No Plate_47
+    21300096: Addy Spritesheet-No Plate_48
+    21300098: Addy Spritesheet-No Plate_49
+    21300100: Addy Spritesheet-No Plate_50
+    21300102: Addy Spritesheet-No Plate_51
+    21300104: Addy Spritesheet-No Plate_52
+    21300106: Addy Spritesheet-No Plate_53
+    21300108: Addy Spritesheet-No Plate_54
+    21300110: Addy Spritesheet-No Plate_55
+    21300112: Addy Spritesheet-No Plate_56
+    21300114: Addy Spritesheet-No Plate_57
+    21300116: Addy Spritesheet-No Plate_58
+    21300118: Addy Spritesheet-No Plate_59
+    21300120: Addy Spritesheet-No Plate_60
+    21300122: Addy Spritesheet-No Plate_61
+    21300124: Addy Spritesheet-No Plate_62
+    21300126: Addy Spritesheet-No Plate_63
+    21300128: Addy Spritesheet-No Plate_64
+    21300130: Addy Spritesheet-No Plate_65
+    21300132: Addy Spritesheet-No Plate_66
+    21300134: Addy Spritesheet-No Plate_67
+    21300136: Addy Spritesheet-No Plate_68
+    21300138: Addy Spritesheet-No Plate_69
+    21300140: Addy Spritesheet-No Plate_70
+    21300142: Addy Spritesheet-No Plate_71
+    21300144: Addy Spritesheet-No Plate_72
+    21300146: Addy Spritesheet-No Plate_73
+    21300148: Addy Spritesheet-No Plate_74
+    21300150: Addy Spritesheet-No Plate_75
+    21300152: Addy Spritesheet-No Plate_76
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +117,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +146,1560 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_0
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 6750
+        width: 936
+        height: 979
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69dc29d6b319428598762beb2303fe8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_1
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 6752
+        width: 946
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928e73b9cde77472bb565eef33478c4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_2
+      rect:
+        serializedVersion: 2
+        x: 4474
+        y: 6766
+        width: 940
+        height: 952
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921af66b5d0724c888a3fffbc652789b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_3
+      rect:
+        serializedVersion: 2
+        x: 5535
+        y: 7475
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa1432bda5d0493a9361e11a14440db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_4
+      rect:
+        serializedVersion: 2
+        x: 6447
+        y: 6766
+        width: 987
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e95c020505d4f5db9ef50658f14f83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_5
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 7420
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a1a76661acf4ccca4e762bf145e636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_6
+      rect:
+        serializedVersion: 2
+        x: 7579
+        y: 7388
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6637c3e974e13449b93248ac59a89afa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_7
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 7384
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523304c669663445d9a8c831b22791ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 4762
+        width: 955
+        height: 919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afb42856377943eb94a6203c0e0c07c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_9
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 4762
+        width: 932
+        height: 956
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f7331c1472b48a38554fa66c16cf60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_10
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 4766
+        width: 928
+        height: 952
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24686d017d63341199482f215300ddc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_11
+      rect:
+        serializedVersion: 2
+        x: 5503
+        y: 5487
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05c21d0455ca4123a399cc855d48f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_12
+      rect:
+        serializedVersion: 2
+        x: 6490
+        y: 4751
+        width: 935
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6021df998b8fb448a923bbafaf1aa033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_13
+      rect:
+        serializedVersion: 2
+        x: 7571
+        y: 5475
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc9e13c1a0c74d0d9e511cda23b67d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_14
+      rect:
+        serializedVersion: 2
+        x: 5599
+        y: 5455
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fe8890afa3749e9930ead15eb1fdfc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_15
+      rect:
+        serializedVersion: 2
+        x: 5456
+        y: 5380
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9900c45f1eae643998445757746e9d7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_16
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 5368
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052b52a90daea48c99199d24c6a70fbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_17
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 2752
+        width: 934
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05f7b8a13b4a4aeea9cfb43cd939684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_18
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2762
+        width: 943
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90145a3bee95c4971817d773b90fc9ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_19
+      rect:
+        serializedVersion: 2
+        x: 3431
+        y: 3554
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d38d0c3b689498eb7583f7813e320d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_20
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 2752
+        width: 932
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe21acc8f1b748aeac38023328e426a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_21
+      rect:
+        serializedVersion: 2
+        x: 6490
+        y: 2767
+        width: 932
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5122bd3fc9c944c6580df9d01d5412e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_22
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 3539
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58594a70e38124f10a2b77060e47b696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_23
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 3523
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5056d32f5c77242489e4088a4690d5de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_24
+      rect:
+        serializedVersion: 2
+        x: 7440
+        y: 3512
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177cb48b9b6204c819a97cb87eaa725c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_25
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 3487
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff697fca648149a88fdd8426d272aec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_26
+      rect:
+        serializedVersion: 2
+        x: 3572
+        y: 3484
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620e0e1ef396f4b0ca5ebac9446a4e6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_27
+      rect:
+        serializedVersion: 2
+        x: 7420
+        y: 3483
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea32fc5a336c749fdac145d0cee2a8ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_28
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 3456
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d66f690ebd3407e9d3f379e136adc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_29
+      rect:
+        serializedVersion: 2
+        x: 3544
+        y: 3464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b674c48bf92fd4759a18f4816ff49bf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_30
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 3468
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3571802594a41f48b4bfc9e733952f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_31
+      rect:
+        serializedVersion: 2
+        x: 5559
+        y: 3471
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9059df6347b2e4ca68b042acb34d0331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_32
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 3464
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7563df4640e244a4865b17d9e7c09f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_33
+      rect:
+        serializedVersion: 2
+        x: 7432
+        y: 3464
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b289f207a2564980a2849b82e3e4a85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_34
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 3460
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd22a2b1e91ec4c4eb8e5aada7a2037b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_35
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 3448
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fec65d66cb7423593746523daad836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_36
+      rect:
+        serializedVersion: 2
+        x: 5480
+        y: 3444
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b872f3851cd4e0bb2ad6d138333113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_37
+      rect:
+        serializedVersion: 2
+        x: 7536
+        y: 3436
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b9a656f082a448297bb523ad57fe91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_38
+      rect:
+        serializedVersion: 2
+        x: 3532
+        y: 3432
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bcc22b063584389a46252ba56134ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_39
+      rect:
+        serializedVersion: 2
+        x: 5511
+        y: 3431
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d89ac83e7fad40b98e39838c07f1b95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_40
+      rect:
+        serializedVersion: 2
+        x: 5539
+        y: 3427
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4437545c07ef641aca027e02ae6c7043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_41
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 3402
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb7af4f247704384b92e596cb26c932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_42
+      rect:
+        serializedVersion: 2
+        x: 5580
+        y: 3412
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923fa39167b1e472b8078f29cddedb49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_43
+      rect:
+        serializedVersion: 2
+        x: 7435
+        y: 3415
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8161f1496ee4645ff996f81100f89d51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_44
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 3404
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a856c6772094a47837a80a11dd32f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_45
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 3407
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c5ac084358a4fa9a6b3ea06d85e84a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_46
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 3403
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d250cb2092c0480d9d64deff563027b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_47
+      rect:
+        serializedVersion: 2
+        x: 5484
+        y: 3390
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e846c3753a1674c369bf39f89cba00bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_48
+      rect:
+        serializedVersion: 2
+        x: 5516
+        y: 3384
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b970bfbbdb41a4b39a11b47b14ee040f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_49
+      rect:
+        serializedVersion: 2
+        x: 7508
+        y: 3388
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31d13e71522b40c7ac8626c1bbbe6b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_50
+      rect:
+        serializedVersion: 2
+        x: 7583
+        y: 3387
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7719bf5d3a94e1494577706875cd16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_51
+      rect:
+        serializedVersion: 2
+        x: 5456
+        y: 3380
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95010e53811a483c982fb22e9011a43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_52
+      rect:
+        serializedVersion: 2
+        x: 7516
+        y: 3364
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8fca57fd31948edbea0567086ac567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_53
+      rect:
+        serializedVersion: 2
+        x: 7523
+        y: 3355
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a8e65087d91464093c349f90d5d0a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_54
+      rect:
+        serializedVersion: 2
+        x: 7488
+        y: 3352
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27b1e15bace5454fae948f3491fbde4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_55
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 762
+        width: 932
+        height: 956
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09a2f24b35ea49748708ea7531d931e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_56
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1559
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98375ccf4489f4b65b092217afc3d4b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_57
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 1551
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497d94c2528224ff0997080e2ab817b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_58
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 768
+        width: 935
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5040495756b6244c18131b71471553d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_59
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 1532
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2be67837ea164a37874eb2a7d49b49b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_60
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1514
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198a21ffb8d234ff380e12bdb4bd3f13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_61
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1483
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b5b2be2f0da421d9b225afc3ac631d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_62
+      rect:
+        serializedVersion: 2
+        x: 3479
+        y: 1459
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7265816a7c25b4f7d9b2ecd4ee9c83f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_63
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 1488
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9047538561f814d7ebcd85240522a9ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_64
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 1483
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa023666437c24eaf9885b8aa863c781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_65
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 1475
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c34c7e951a7f46148c9faafafe1d3ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_66
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 1459
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef1876aa4ffb4456a711ea303aaa1f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_67
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 1459
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5db8f7ad00e34d3dbe513af0a7163e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_68
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1435
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba661737b158c4e9291322629e15672a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_69
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1431
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc86e1bc16dee44dc8fbab530ca1caca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_70
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1424
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557c68c9909e3416d859206d126de9b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_71
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1403
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264eb93eb9b734e0e9d6709c43d5b9f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_72
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1404
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf94e37d64cb4a52b8b81617b185465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_73
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 1399
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca001f64f95974f8892421e86c1fbff9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_74
+      rect:
+        serializedVersion: 2
+        x: 3455
+        y: 1395
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697c2555609794f0da3fc9935ab61f15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_75
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1400
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc6059b01c694a618bba94f0180f3e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy Spritesheet-No Plate_76
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1380
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c30993b779b475ea270b28a8186678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
