@@ -428,31 +428,38 @@ public class LevelLoader : MonoBehaviour
         {
             if (world == 0)
             {
-                ampersand.ActiveTool = MakeTool(valueTool);
+            //    ampersand.ActiveTool = MakeTool(valueTool);
+                ampersand.transform.Find("valueTool").gameObject.SetActive(true);
             }
             else if (world >= 3)
             {
                 ampersand.ActiveTool = MakeTool(pointerTool);
+                ampersand.transform.Find("valueTool").gameObject.SetActive(false);
             }
             else
             {
                 ampersand.ActiveTool = MakeTool(pointerTool);
+                ampersand.transform.Find("valueTool").gameObject.SetActive(false);
             }
         }
         if ((tools & 2) == 0)
         {
             if (world == 0)
             {
-                star.ActiveTool = MakeTool(valueTool);
+               // star.ActiveTool = MakeTool(valueTool);
+                star.transform.Find("valueTool").gameObject.SetActive(true);
+                
             }
             else if (world >= 3)
             {
-                star.ActiveTool = MakeTool(valueTool);
+               // star.ActiveTool = MakeTool(valueTool);
+                star.transform.Find("valueTool").gameObject.SetActive(true);
                 star.InActiveTool = MakeTool(incrementTool);
             }
             else
             {
-                star.ActiveTool = MakeTool(valueTool);
+             //   star.ActiveTool = MakeTool(valueTool);
+                star.transform.Find("valueTool").gameObject.SetActive(true);
             }
         }
 
