@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: 882a671bbe83f487eafa4f3c30279ef1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Val Spritesheet-No Plate_0
+    21300002: Val Spritesheet-No Plate_1
+    21300004: Val Spritesheet-No Plate_2
+    21300006: Addy Spritesheet-No Plate_3
+    21300008: Addy Spritesheet-No Plate_4
+    21300010: Addy Spritesheet-No Plate_5
+    21300012: Addy Spritesheet-No Plate_6
+    21300014: Addy Spritesheet-No Plate_7
+    21300016: Addy Spritesheet-No Plate_8
+    21300018: Addy Spritesheet-No Plate_9
+    21300020: Addy Spritesheet-No Plate_10
+    21300022: Addy Spritesheet-No Plate_11
+    21300024: Addy Spritesheet-No Plate_12
+    21300026: Addy Spritesheet-No Plate_13
+    21300028: Addy Spritesheet-No Plate_14
+    21300030: Addy Spritesheet-No Plate_15
+    21300032: Addy Spritesheet-No Plate_16
+    21300034: Addy Spritesheet-No Plate_17
+    21300036: Addy Spritesheet-No Plate_18
+    21300038: Addy Spritesheet-No Plate_19
+    21300040: Addy Spritesheet-No Plate_20
+    21300042: Addy Spritesheet-No Plate_21
+    21300044: Addy Spritesheet-No Plate_22
+    21300046: Addy Spritesheet-No Plate_23
+    21300048: Addy Spritesheet-No Plate_24
+    21300050: Addy Spritesheet-No Plate_25
+    21300052: Addy Spritesheet-No Plate_26
+    21300054: Addy Spritesheet-No Plate_27
+    21300056: Addy Spritesheet-No Plate_28
+    21300058: Addy Spritesheet-No Plate_29
+    21300060: Addy Spritesheet-No Plate_30
+    21300062: Addy Spritesheet-No Plate_31
+    21300064: Addy Spritesheet-No Plate_32
+    21300066: Addy Spritesheet-No Plate_33
+    21300068: Addy Spritesheet-No Plate_34
+    21300070: Addy Spritesheet-No Plate_35
+    21300072: Addy Spritesheet-No Plate_36
+    21300074: Addy Spritesheet-No Plate_37
+    21300076: Addy Spritesheet-No Plate_38
+    21300078: Addy Spritesheet-No Plate_39
+    21300080: Addy Spritesheet-No Plate_40
+    21300082: Addy Spritesheet-No Plate_41
+    21300084: Addy Spritesheet-No Plate_42
+    21300086: Addy Spritesheet-No Plate_43
+    21300088: Addy Spritesheet-No Plate_44
+    21300090: Addy Spritesheet-No Plate_45
+    21300092: Addy Spritesheet-No Plate_46
+    21300094: Addy Spritesheet-No Plate_47
+    21300096: Addy Spritesheet-No Plate_48
+    21300098: Addy Spritesheet-No Plate_49
+    21300100: Addy Spritesheet-No Plate_50
+    21300102: Addy Spritesheet-No Plate_51
+    21300104: Addy Spritesheet-No Plate_52
+    21300106: Addy Spritesheet-No Plate_53
+    21300108: Addy Spritesheet-No Plate_54
+    21300110: Addy Spritesheet-No Plate_55
+    21300112: Addy Spritesheet-No Plate_56
+    21300114: Addy Spritesheet-No Plate_57
+    21300116: Addy Spritesheet-No Plate_58
+    21300118: Addy Spritesheet-No Plate_59
+    21300120: Addy Spritesheet-No Plate_60
+    21300122: Addy Spritesheet-No Plate_61
+    21300124: Addy Spritesheet-No Plate_62
+    21300126: Addy Spritesheet-No Plate_63
+    21300128: Addy Spritesheet-No Plate_64
+    21300130: Addy Spritesheet-No Plate_65
+    21300132: Addy Spritesheet-No Plate_66
+    21300134: Addy Spritesheet-No Plate_67
+    21300136: Addy Spritesheet-No Plate_68
+    21300138: Addy Spritesheet-No Plate_69
+    21300140: Addy Spritesheet-No Plate_70
+    21300142: Addy Spritesheet-No Plate_71
+    21300144: Addy Spritesheet-No Plate_72
+    21300146: Addy Spritesheet-No Plate_73
+    21300148: Addy Spritesheet-No Plate_74
+    21300150: Addy Spritesheet-No Plate_75
+    21300152: Addy Spritesheet-No Plate_76
+    21300154: Val Spritesheet-No Plate_3
+    21300156: Val Spritesheet-No Plate_4
+    21300158: Val Spritesheet-No Plate_5
+    21300160: Val Spritesheet-No Plate_6
+    21300162: Val Spritesheet-No Plate_7
+    21300164: Val Spritesheet-No Plate_8
+    21300166: Val Spritesheet-No Plate_9
+    21300168: Val Spritesheet-No Plate_10
+    21300170: Val Spritesheet-No Plate_11
+    21300172: Val Spritesheet-No Plate_12
+    21300174: Val Spritesheet-No Plate_13
+    21300176: Val Spritesheet-No Plate_14
+    21300178: Val Spritesheet-No Plate_15
+    21300180: Val Spritesheet-No Plate_16
+    21300182: Val Spritesheet-No Plate_17
+    21300184: Val Spritesheet-No Plate_18
+    21300186: Val Spritesheet-No Plate_19
+    21300188: Val Spritesheet-No Plate_20
+    21300190: Val Spritesheet-No Plate_21
+    21300192: Val Spritesheet-No Plate_22
+    21300194: Val Spritesheet-No Plate_23
+    21300196: Val Spritesheet-No Plate_24
+    21300198: Val Spritesheet-No Plate_25
+    21300200: Val Spritesheet-No Plate_26
+    21300202: Val Spritesheet-No Plate_27
+    21300204: Val Spritesheet-No Plate_28
+    21300206: Val Spritesheet-No Plate_29
+    21300208: Val Spritesheet-No Plate_30
+    21300210: Val Spritesheet-No Plate_31
+    21300212: Val Spritesheet-No Plate_32
+    21300214: Val Spritesheet-No Plate_33
+    21300216: Val Spritesheet-No Plate_34
+    21300218: Val Spritesheet-No Plate_35
+    21300220: Val Spritesheet-No Plate_36
+    21300222: Val Spritesheet-No Plate_37
+    21300224: Val Spritesheet-No Plate_38
+    21300226: Val Spritesheet-No Plate_39
+    21300228: Val Spritesheet-No Plate_40
+    21300230: Val Spritesheet-No Plate_41
+    21300232: Val Spritesheet-No Plate_42
+    21300234: Val Spritesheet-No Plate_43
+    21300236: Val Spritesheet-No Plate_44
+    21300238: Val Spritesheet-No Plate_45
+    21300240: Val Spritesheet-No Plate_46
+    21300242: Val Spritesheet-No Plate_47
+    21300244: Val Spritesheet-No Plate_48
+    21300246: Val Spritesheet-No Plate_49
+    21300248: Val Spritesheet-No Plate_50
+    21300250: Val Spritesheet-No Plate_51
+    21300252: Val Spritesheet-No Plate_52
+    21300254: Val Spritesheet-No Plate_53
+    21300256: Val Spritesheet-No Plate_54
+    21300258: Val Spritesheet-No Plate_55
+    21300260: Val Spritesheet-No Plate_56
+    21300262: Val Spritesheet-No Plate_57
+    21300264: Val Spritesheet-No Plate_58
+    21300266: Val Spritesheet-No Plate_59
+    21300268: Val Spritesheet-No Plate_60
+    21300270: Val Spritesheet-No Plate_61
+    21300272: Val Spritesheet-No Plate_62
+    21300274: Val Spritesheet-No Plate_63
+    21300276: Val Spritesheet-No Plate_64
+    21300278: Val Spritesheet-No Plate_65
+    21300280: Val Spritesheet-No Plate_66
+    21300282: Val Spritesheet-No Plate_67
+    21300284: Val Spritesheet-No Plate_68
+    21300286: Val Spritesheet-No Plate_69
+    21300288: Val Spritesheet-No Plate_70
+    21300290: Val Spritesheet-No Plate_71
+    21300292: Val Spritesheet-No Plate_72
+    21300294: Val Spritesheet-No Plate_73
+    21300296: Val Spritesheet-No Plate_74
+    21300298: Val Spritesheet-No Plate_75
+    21300300: Val Spritesheet-No Plate_76
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_0
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1688
+        width: 249
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78d44878edc04378b81159b5ce1b655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_1
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1688
+        width: 234
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfedd7df523914f2bb982410351f128c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1692
+        width: 266
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac92c94b1fffd4d8b841a886b6ad1e98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_3
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 1692
+        width: 283
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ff23740a1314654b7c484cf1d22e31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1191
+        width: 263
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f30cb5d984c347788221da07a7dab2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_5
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1191
+        width: 231
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe4453a8c5604db88c2856e5540692b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_6
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1192
+        width: 278
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3acb93ea854148a89ce849be4b163fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_7
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 1189
+        width: 271
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb676800c90c342a089d734947ced364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 690
+        width: 248
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1303d97253f944eda32e27398013ffc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_9
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 688
+        width: 278
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf57c379a9644bfdb11635792d31cf8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_10
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 688
+        width: 273
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a10e9cee79e243d5942e24d60970aab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_11
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 692
+        width: 274
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de22d91183e3f4481b0285e2f7e11526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 191
+        width: 266
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673e9b372997a46f4ba8adaad86ecb7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Val Spritesheet-No Plate_13
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 193
+        width: 274
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15005b83841a8475f88f14a910882efb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 49a19109f69b446dc9062a5d642bd0f6
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
