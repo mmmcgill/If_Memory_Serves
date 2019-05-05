@@ -7,10 +7,22 @@ public class AmpersandController : PlayerController {
 
 
     private StarController star;
-   // private Animator animAddy;
-   // float speedAddy;
+    // private Animator animAddy;
+    // float speedAddy;
     //bool facingright;
     //private Rigidbody rbAddy;
+
+
+    public override void Update()
+    {
+        base.Update();
+        // initially, the temporary vector should equal the player's position
+        Vector3 clampedPosition = transform.position;
+        // Now we can manipulte it to clamp the y element
+        clampedPosition.x = Mathf.Clamp(transform.position.x, 4.0f, 16.0f);
+        // re-assigning the transform's position will clamp it
+        transform.position = clampedPosition;
+    }
 
     override public void Start() {
     base.Start();

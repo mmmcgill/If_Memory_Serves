@@ -16,7 +16,17 @@ public class StarController : PlayerController {
     otherPlayer = ampersand;
   }
 
-  override public bool IsConnectedToOther() {
+    public override void Update()
+    {
+        base.Update();
+        // initially, the temporary vector should equal the player's position
+        Vector3 clampedPosition = transform.position;
+        // Now we can manipulte it to clamp the y element
+        clampedPosition.x = Mathf.Clamp(transform.position.x, 3.2f, 16.0f);
+        // re-assigning the transform's position will clamp it
+        transform.position = clampedPosition;
+    }
+    override public bool IsConnectedToOther() {
     return true;
   }
     public void OnTriggerEnter2D(Collider2D collision)
