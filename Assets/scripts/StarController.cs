@@ -12,7 +12,8 @@ public class StarController : PlayerController {
     base.Start();
     this.Type = "D";
 
-    ampersand = GameObject.Find("/players/ampersand").GetComponent<AmpersandController>();
+        ampersand = GameObject.Find("/players/ampersand").GetComponent<AmpersandController>();
+        transform.eulerAngles = new Vector3(0, -180, 0);
     otherPlayer = ampersand;
   }
 

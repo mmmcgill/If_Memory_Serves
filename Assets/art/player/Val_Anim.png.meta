@@ -1,7 +1,45 @@
 fileFormatVersion: 2
 guid: dcda4c4a0063143d68bc843309e09fc1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Addy_Anim_0
+    21300002: Addy_Anim_1
+    21300004: Addy_Anim_2
+    21300006: Addy_Anim_3
+    21300008: Addy_Anim_4
+    21300010: Addy_Anim_5
+    21300012: Addy_Anim_6
+    21300014: Addy_Anim_7
+    21300016: Addy_Anim_8
+    21300018: Addy_Anim_9
+    21300020: Addy_Anim_10
+    21300022: Addy_Anim_11
+    21300024: Addy_Anim_12
+    21300026: Addy_Anim_13
+    21300028: Addy_Anim_14
+    21300030: Addy_Anim_15
+    21300032: Addy_Anim_16
+    21300034: Addy_Anim_17
+    21300036: Addy_Anim_18
+    21300038: Addy_Anim_19
+    21300040: Addy_Anim_20
+    21300042: Addy_Anim_21
+    21300044: Addy_Anim_22
+    21300046: Addy_Anim_23
+    21300048: Addy_Anim_24
+    21300050: Addy_Anim_25
+    21300052: Addy_Anim_26
+    21300054: Addy_Anim_27
+    21300056: Addy_Anim_28
+    21300058: Addy_Anim_29
+    21300060: Addy_Anim_30
+    21300062: Addy_Anim_31
+    21300064: Addy_Anim_32
+    21300066: Addy_Anim_33
+    21300068: Addy_Anim_34
+    21300070: Addy_Anim_35
+    21300072: Addy_Anim_36
+    21300074: Addy_Anim_37
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,14 +78,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -69,9 +107,260 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Addy_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6657
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b718a1cd749488dad0d91d128c3035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 6657
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5632fbab84bd64ecf8530eaa966d0664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 6657
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451d121ff9b8e49b3978899b8b99b6fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 6657
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6f776c9fb814de9a222834a8f82317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5122
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e6df5cf95814193aec45cb356c04fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 5122
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91212e38a1aa4d01aaea129d40a71ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 5122
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fef028858074f49bb2c4f50800ed78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 5122
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd99b0ee5154f8283cdcf8c1e32e0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3587
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4d8748510c54382ab45390986a7b72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 3587
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e403a7d223fe044e9a9784a730820d5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 3587
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366bcf0032fe94491bb5f0fc5749a91f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Addy_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 3587
+        width: 2040
+        height: 1535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd56f78914b174bfbb7254b229763581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
